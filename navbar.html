@@ -1,0 +1,60 @@
+<nav class="navbar fixed w-full bg-white shadow-sm z-50" id="navbar" data-aos="fade-down">
+  <div class="container-nav">
+    <div class="navbar-wrapper">
+      <div class="logo">
+        <img src="assets/white.png" alt="Logo" class="logo-image" id="navbar-logo">
+      </div>
+
+      <div class="nav-links desktop-only">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="sermons.html" class="nav-link">Sermons</a>
+        <div class="dropdown-wrapper nav-link dropdown">
+          <div id="departments-toggle">
+            <span>Departments<i class="fas fa-chevron-down" style="margin-left: 5px; margin-top: -5px; font-size: 0.65rem;"></i></span>
+          </div>
+          <div class="dropdown-content" id="departments-menu">
+            <div class="dropdown-group">
+              <strong style="display:block; padding: 0.5rem 1rem; color: #555;">Connect</strong>
+              <div class="dropdown-row">
+                <a href="connect.html#youth"><i class="fas fa-user-graduate"></i> Youth</a>
+                <a href="connect.html#adults"><i class="fas fa-user"></i> Adults</a>
+                <a href="pathfinders.html"><i class="fas fa-map"></i> Pathfinders</a>
+              </div>
+              <div class="dropdown-row">
+                <a href="connect.html#outreach"><i class="fas fa-hands"></i> Outreach & Prayer</a>
+                <a href="sabbathschool.html"><i class="fas fa-church"></i> Sabbath School</a>
+              </div>
+            </div>
+            <div class="dropdown-group">
+              <div class="dropdown-row">
+                <a href="pathfinders.html#pathfinder-info"><i class="fas fa-compass"></i> Pathfinders</a>
+                <a href="personal-ministries.html"><i class="fas fa-hands-helping"></i> Personal Ministries</a>
+                <a href="prayer-team.html"><i class="fas fa-praying-hands"></i> Prayer Team</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="Contact.html" class="nav-link">Contact</a>
+        <a href="Give.html" class="nav-link">Give</a>
+      </div>
+
+      <button class="menu-button mobile-only" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu hidden" id="mobile-menu">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="Catalogue.html" class="mobile-nav-link">Catalogue</a>
+    <a href="Facilities.html" class="mobile-nav-link">Facilities</a>
+    <a href="About.html" class="mobile-nav-link">About</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+  </div>
+</nav>

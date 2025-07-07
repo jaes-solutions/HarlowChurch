@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathfinders - HCSDA Church</title>
+  <link rel="stylesheet" href="personal-ministries.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+
+<body>
+
+  <div id="navbar-container"></div>
+
+
+
+
+  
+
+  <section class="prison-ministry-section" data-aos="fade-up">
+    <div class="prison-ministry-content">
+      <div class="prison-ministry-text">
+        <h2>Prison Ministries</h2>
+        <p>The Prison Ministries Department is dedicated to reaching prisoners and offenders across southern England through a wide range of compassionate and transformative initiatives. These include Bible study programs that offer spiritual growth, uplifting choir performances that bring hope and encouragement, and thought-provoking lectures designed to educate and inspire. By entering prisons and detention centres with messages of faith, redemption, and support, the department seeks to make a lasting impact on the lives of inmates and contribute to their journey of personal and spiritual restoration.”
+</p>
+      </div>
+      <div class="prison-ministry-image">
+        <img src="assets/prison.png" alt="Prison Ministry" />
+      </div>
+    </div>
+  </section>
+
+  <section class="community-outreach-section" data-aos="fade-up">
+    <div class="community-outreach-content">
+      <div class="community-outreach-image">
+        <img src="assets/community-outreach.jpg" alt="Community Outreach" />
+      </div>
+      <div class="community-outreach-text">
+        <h2>Community Outreach</h2>
+        <p>The Community Outreach Department is committed to connecting with the local community through acts of kindness, service projects, and support initiatives. Whether it's distributing food, offering free health checks, or hosting educational workshops, the goal is to demonstrate God’s love in practical ways. By engaging directly with people’s needs, the department brings hope, relief, and a sense of belonging to those it serves.</p>
+        <div class="incharge-card">
+  <img src="assets/donny-halder.jpg" alt="Mr. Donny Halder" class="incharge-photo">
+  <div class="incharge-details">
+    <h4>Mr. Donny Halder</h4>
+    <p>Community Outreach Incharge</p>
+  </div>
+</div>
+      </div>
+      
+    </div>
+  </section>
+
+
+
+  <div id="footer"></div>
+  <script>
+//navbar dropdown
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.getElementById('departments-toggle');
+  const menu = document.getElementById('departments-menu');
+  let hideTimeout;
+
+  function showMenu() {
+    clearTimeout(hideTimeout);
+    menu.classList.add('show');
+  }
+
+  function scheduleHideMenu() {
+    hideTimeout = setTimeout(() => {
+      menu.classList.remove('show');
+    }, 800); // 1000 seconds
+  }
+
+  toggle.addEventListener('mouseenter', showMenu);
+  menu.addEventListener('mouseenter', showMenu);
+
+  toggle.addEventListener('mouseleave', scheduleHideMenu);
+  menu.addEventListener('mouseleave', scheduleHideMenu);
+
+  // Toggle videos based on screen width
+  const desktopVideo = document.getElementById('desktop-video');
+  const mobileVideo = document.getElementById('mobile-video');
+
+  function toggleVideoDisplay() {
+    if (window.innerWidth <= 765) {
+      desktopVideo.style.display = 'none';
+      mobileVideo.style.display = 'block';
+    } else {
+      desktopVideo.style.display = 'block';
+      mobileVideo.style.display = 'none';
+    }
+  }
+
+  toggleVideoDisplay();
+  window.addEventListener('resize', toggleVideoDisplay);
+});
+    // Load the navbar HTML
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+  // Load the footer HTML
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+
+
+
+
+//mobile menu
+       window.addEventListener('scroll', function () {
+  const navbar = document.getElementById('navbar');
+  const navLinks = document.querySelectorAll('.nav-ser');
+
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+    navLinks.forEach(link => link.classList.add('scrolled-link'));
+  } else {
+    navbar.classList.remove('scrolled');
+    navLinks.forEach(link => link.classList.remove('scrolled-link'));
+  }
+});
+
+        window.toggleMenu = function () {
+          const menu = document.getElementById('mobile-menu');
+          menu.classList.toggle('hidden');
+        }
+      });
+
+    //footer
+ window.addEventListener("load", function () {
+    const yearSpan = document.getElementById("current-year");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  });
+
+
+AOS.init({
+  duration: 1000
+});
+  </script>
+
+
+
+</body>
+</html>
