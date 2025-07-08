@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harlow Central SDA Church</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+
+<body>
+
+  <div id="navbar-container"></div>
+
+
+<div class="responsive-image-container">
+  <img src="assets/harlw.png" alt="Church Image" class="responsive-image">
+</div>
+<!-- HTML !-->
+ <section class="watch-usonline">
+  <h2>Watch Us Live</h2>
+  <p>You’re warmly invited to join us every Saturday at 10 AM.</p>
+</section>
+<button class="button-57" role="button" onclick="window.open('https://www.youtube.com/@harlowcommunitysdachurch3098/streams', '_blank')">
+  <span class="text">Hover over me!</span><span>We're Live</span>
+</button>
+
+
+<div class="info-boxes">
+  <div class="info-box" data-link="sermons.html">
+    <img src="assets/sermon.png" alt="Sermons" class="info-img" />
+    <h3>Sermons</h3>
+    <p>Join us every Saturday for uplifting services.</p>
+  </div>
+  <div class="info-box" >
+    <img src="assets/test.png" alt="Testimonies" class="info-img" />
+    <h3>Testimonies</h3>
+    <p>Be inspired by stories of faith and personal experiences.</p>
+  </div>
+  <div class="info-box">
+    <img src="assets/sabschool.png" alt="Sabbath School" class="info-img" />
+    <h3>Sabbath School</h3>
+    <p>Deepen your faith with our lesson study sessions.</p>
+  </div>
+  <div class="info-box">
+    <img src="assets/path.png" alt="Pathfinders" class="info-img" />
+    <h3>Pathfinders</h3>
+    <p>Engaging activities that build character and spiritual growth for youth.</p>
+  </div>
+  <div class="info-box">
+    <img src="assets/out.png" alt="Outreach & Prayer" class="info-img" />
+    <h3>Outreach & Prayer</h3>
+    <p>Be a part of outreach and volunteering efforts.</p>
+  </div>
+  <div class="info-box">
+    <img src="assets/youth.png" alt="Youth" class="info-img" />
+    <h3>Youth</h3>
+    <p>Empowering our youth through faith-based activities.</p>
+  </div>
+  <div class="info-box">
+    <img src="assets/childr.png" alt="Children" class="info-img" />
+    <h3>Children</h3>
+    <p>Fun, faith-filled programs designed for children of all ages.</p>
+  </div>
+  <div class="info-box">
+    <img src="assets/adul.png" alt="Adults" class="info-img" />
+    <h3>Adults</h3>
+    <p>Faith-enriching programs and discussions for adults.</p>
+  </div>
+</div>
+
+<section class="welcome-section" data-aos="fade-up">
+  <div class="welcome-container">
+    <h2>Welcome to Harlow Central Seventh-day Adventist Church</h2>
+    <p>We’re delighted to have you here! At Harlow Central SDA Church, we’re a community grounded in faith, love, and service. Whether you’re a regular member or visiting for the first time, you’re warmly welcomed to worship, grow, and serve with us.</p>
+  </div>
+</section>
+
+<section id="prayer-line" class="prayer-line-section">
+  <div class="prayer-line-container">
+    <div class="prayer-image" data-aos="fade-right">
+      <img src="assets/pray.png" alt="Prayer Line" />
+      <div class="prayer-content" data-aos="fade-left">
+      <h2>Join Our Prayer Line</h2>
+      <p>Wherever you are, you’re never alone—come pray with us and be uplifted every day on Zoom.</p>
+      <p><strong>Sunday to Friday</strong><br>6:00 AM &middot; 12:00 PM</p>
+      <a href="https://zoom.us/join" target="_blank" class="watch-live-btn">Join on Zoom</a>
+    </div>
+  </div>
+</section>
+<section class="pastor-section">
+    <div class="pastor-container">
+      <img src="assets/pastor.jpg" alt="Pastor Image" class="pastor-image" />
+      <div class="pastor-details">
+        <h2>Meet Our Pastor</h2>
+        <p>Pastor John Smith leads our community with love and truth rooted in the Word of God. With a heart for service and a passion for outreach, he is dedicated to guiding the congregation spiritually and emotionally.</p>
+      </div>
+    </div>
+  </section>
+<section id="watch-us-online">
+  <h2>Get in Touch!</h2>
+  <p>Follow us for the latest updates and videos!</p>
+
+  <div class="watch-icons">
+    <a href="https://www.youtube.com/@harlowcommunitysdachurch3098/streams" target="_blank" class="youtube">
+    <i class="fab fa-youtube"></i>    </a>
+    <a href="https://www.facebook.com/yourpage" target="_blank" class="facebook">
+    <i class="fab fa-facebook"></i>    </a>
+  </div>
+</section>
+
+
+  <!-- Your page content below -->
+
+
+
+  <div id="footer"></div>
+  <script>
+
+
+//navbar dropdown
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.getElementById('departments-toggle');
+  const menu = document.getElementById('departments-menu');
+  let hideTimeout;
+
+  function showMenu() {
+    clearTimeout(hideTimeout);
+    menu.classList.add('show');
+  }
+
+  function scheduleHideMenu() {
+  hideTimeout = setTimeout(() => {
+    menu.classList.remove('show');
+  }, 200); // or even 0
+}
+
+  toggle.addEventListener('mouseenter', showMenu);
+  menu.addEventListener('mouseenter', showMenu);
+
+  toggle.addEventListener('mouseleave', scheduleHideMenu);
+  menu.addEventListener('mouseleave', scheduleHideMenu);
+});
+    // Load the navbar HTML
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+  // Load the footer HTML
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+
+
+
+
+//mobile menu
+       window.addEventListener('scroll', function () {
+  const navbar = document.getElementById('navbar');
+  const navLinks = document.querySelectorAll('.nav-ser');
+
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+    navLinks.forEach(link => link.classList.add('scrolled-link'));
+  } else {
+    navbar.classList.remove('scrolled');
+    navLinks.forEach(link => link.classList.remove('scrolled-link'));
+  }
+});
+
+        window.toggleMenu = function () {
+          const menu = document.getElementById('mobile-menu');
+          menu.classList.toggle('hidden');
+        }
+      });
+
+
+// box- pages 
+document.querySelectorAll('.info-box').forEach(box => {
+  box.addEventListener('click',() => {
+    const link = box.getAttribute('data-link');
+    if(link){
+      window.location.href = link;
+    }
+  })
+})
+//footer
+ window.addEventListener("load", function () {
+    const yearSpan = document.getElementById("current-year");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  });
+
+
+AOS.init({
+  duration: 1000
+});
+  </script>
+
+
+
+</body>
+</html>
