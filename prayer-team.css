@@ -209,7 +209,14 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
       .logo-image{
         margin-left:-130px;
       }
-  
+      .halal-img{
+        height: 60px;
+     margin-top: 28px;
+     margin-right: -10px;
+    }
+    .salsa-img{
+     display: none;
+    }
     }
     .nav-links {
       display: flex;
@@ -297,188 +304,138 @@ color: #0a182b;
 
 
 
-.children-sabbath-school {
-  background-color: #0a182b; /* Dark background for contrast */
-  color: white;
-  padding: 60px 20px;
+   .big-section {
+  background-color: #0a182b;
+  padding: 100px 20px;
   font-family: 'Poppins', sans-serif;
+  position: relative; /* Ensure shapes stay inside this section */
+  overflow: hidden;
 }
 
-.children-sabbath-school h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #ffffff;
-  margin-top: 70px;
+.big-section .container {
+  max-width: 1200px;
+  margin: auto;
 }
 
-.children-sabbath-school p {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #f0f0f0;
-  margin-bottom: 100px;
-}
-
-.sabbath-classes {
-  
+.big-section .content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding-left: 100px;
-  padding-right: 100px;
+  gap: 60px;
+  align-items: center;
 }
 
-.class-group {
-  background-color: #1d3b64;
-  border-radius: 10px;
-  padding: 20px;
-  width: 280px;
-  text-align: center;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+.big-section .text {
+  flex: 1;
+  min-width: 320px;
 }
 
-
-.class-group h3 {
-  color: #ffffff;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.class-group p {
-  font-size: 0.95rem;
-  color: #cccccc;
-  margin-bottom: 40px;
-}
-
-.class-group a {
-  display: inline-block;
-  
-  color: #00d4ff;
-  text-decoration: underline;
-}
-
-.class-group img {
-  margin-top: 15px;
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.children-sabbath-school .note {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  color: #aaaaaa;
-}
-
-/* Adult Sabbath School Section */
-.adult-sabbath-school {
-  background-color: #1d3b64;
-  padding: 60px 20px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.adult-sabbath-school .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.adult-sabbath-school h2.sab {
-  font-size: 2.4rem;
+.big-section .text h2 {
+  font-size: 3rem;
   font-weight: 600;
   color: white;
   margin-bottom: 20px;
+  text-align: right;
 }
 
-.adult-sabbath-school p {
+.big-section .text .lead {
   font-size: 1rem;
-  color: #a9a9a9;
+  color: #aaaaaa;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.big-section .text p {
+  font-size: 1rem;
+  color: #aaaaaa;
   line-height: 1.7;
   margin-bottom: 15px;
+  text-align: right;
 }
 
-.adult-sabbath-school strong {
-  color: white;
+.big-section .media {
+  flex: 1;
+  min-width: 320px;
+  margin-top: 80px;
 }
 
-.adult-sabbath-school a {
-  color: #0077cc;
-  text-decoration: none;
-  font-weight: 500;
+.big-section .media video {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
-.adult-sabbath-school a:hover {
-  text-decoration: underline;
+
+/* Prayer Request Section */
+.prayer-request-section {
+   background: linear-gradient(to bottom, #1d3b64 0%, #0a182b 100%);
+  padding: 60px 20px;
+  
 }
-.download-btn {
-  display: inline-block;
-  padding: 10px 18px;
-  background-color: #0077cc;
-  color: white !important;
-  border: none;
-  border-radius: 5px;
-  font-weight: 500;
-  text-decoration: none !important;
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+
+.prayer-request-section .container {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  
+}
+
+.prayer-request-section h2 {
+
+    font-family: 'cinz', sans-serif ;
+  
+  font-weight: 600;
+  font-size: 2rem;
   margin-bottom: 10px;
+  color: #333;
+  
 }
-.download-btn:hover {
-  background-color: #005fa3;
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+.prayer-request-section p {
+  
+  color: #666;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
 }
-/* Why Attend Section */
-.adult-sabbath-school h3 {
-  font-size: 1.6rem;
+
+.prayer-request-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.prayer-request-section input,
+.prayer-request-section textarea {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.prayer-request-section input:focus,
+.prayer-request-section textarea:focus {
+  border-color: #3b5998;
+  outline: none;
+}
+
+.prayer-request-section button {
+  padding: 12px;
+  background-color: #3b5998;
   color: white;
-  margin-top: 40px;
-  margin-bottom: 15px;
-}
-
-.adult-sabbath-school ul {
-  list-style: none;
-  padding: 0;
-  max-width: 800px;
-  margin: 0 auto 30px;
-  text-align: left;
-}
-
-.adult-sabbath-school ul li {
-  padding-left: 25px;
-  position: relative;
-  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
   font-size: 1rem;
-  color: #a9a9a9;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.adult-sabbath-school ul li::before {
-  content: '✔';
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #0077cc;
-  font-size: 1rem;
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  .adult-sabbath-school h2.sab {
-    font-size: 1.8rem;
-  }
-
-  .adult-sabbath-school h3 {
-    font-size: 1.3rem;
-  }
-
-  .adult-sabbath-school p,
-  .adult-sabbath-school ul li {
-    font-size: 0.95rem;
-  }
+.prayer-request-section button:hover {
+  background-color: #2d4373;
 }
 
 
@@ -486,9 +443,16 @@ color: #0a182b;
 
 
 
+    
 
 
-/* Footer */
+
+
+
+
+
+
+    /* Footer */
 .footer {
   background-color: #1d3b64;
   padding: 60px 20px 20px;
@@ -574,4 +538,27 @@ color: #0a182b;
   background: #2d73d4;
   color: white;
   transform: scale(1.1);
+}
+
+
+/* Decorative animated shapes for big-section */
+.big-section .shape {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: floatShape 10s infinite ease-in-out;
+  z-index: 0;
+}
+
+.shape1 { top: 20%; left: 10%; animation-delay: 0s; }
+.shape2 { top: 70%; left: 20%; animation-delay: 2s; }
+.shape3 { top: 40%; right: 15%; animation-delay: 4s; }
+.shape4 { bottom: 15%; right: 10%; animation-delay: 6s; }
+.shape5 { bottom: 30%; left: 50%; animation-delay: 8s; }
+
+@keyframes floatShape {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(-20px); opacity: 0.8; }
 }

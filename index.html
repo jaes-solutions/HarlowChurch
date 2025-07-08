@@ -21,6 +21,9 @@
 <div class="responsive-image-container">
   <img src="assets/harlw.png" alt="Church Image" class="responsive-image">
 </div>
+<div class="mobile-only-image-container">
+  <img src="assets/mob.png" alt="Mobile Banner" class="mobile-image">
+</div>
 <!-- HTML !-->
  <section class="watch-usonline">
   <h2>Watch Us Live</h2>
@@ -37,37 +40,37 @@
     <h3>Sermons</h3>
     <p>Join us every Saturday for uplifting services.</p>
   </div>
-  <div class="info-box" >
+  <div class="info-box" data-link="testimonies.html">
     <img src="assets/test.png" alt="Testimonies" class="info-img" />
     <h3>Testimonies</h3>
     <p>Be inspired by stories of faith and personal experiences.</p>
   </div>
-  <div class="info-box">
+  <div class="info-box" data-link="sermons.html">
     <img src="assets/sabschool.png" alt="Sabbath School" class="info-img" />
     <h3>Sabbath School</h3>
     <p>Deepen your faith with our lesson study sessions.</p>
   </div>
-  <div class="info-box">
+  <div class="info-box" data-link="pathfinders.html#pathfinders">
     <img src="assets/path.png" alt="Pathfinders" class="info-img" />
     <h3>Pathfinders</h3>
     <p>Engaging activities that build character and spiritual growth for youth.</p>
   </div>
-  <div class="info-box">
+  <div class="info-box" data-link="outreach.html">
     <img src="assets/out.png" alt="Outreach & Prayer" class="info-img" />
     <h3>Outreach & Prayer</h3>
     <p>Be a part of outreach and volunteering efforts.</p>
   </div>
-  <div class="info-box">
+  <div class="info-box" data-link="youth.html">
     <img src="assets/youth.png" alt="Youth" class="info-img" />
     <h3>Youth</h3>
     <p>Empowering our youth through faith-based activities.</p>
   </div>
-  <div class="info-box">
+  <div class="info-box" data-link="children.html">
     <img src="assets/childr.png" alt="Children" class="info-img" />
     <h3>Children</h3>
     <p>Fun, faith-filled programs designed for children of all ages.</p>
   </div>
-  <div class="info-box">
+  <div class="info-box" data-link="pathfinders.html">
     <img src="assets/adul.png" alt="Adults" class="info-img" />
     <h3>Adults</h3>
     <p>Faith-enriching programs and discussions for adults.</p>
@@ -85,7 +88,8 @@
   <div class="prayer-line-container">
     <div class="prayer-image" data-aos="fade-right">
       <img src="assets/pray.png" alt="Prayer Line" />
-      <div class="prayer-content" data-aos="fade-left">
+    </div>
+    <div class="prayer-content" data-aos="fade-left">
       <h2>Join Our Prayer Line</h2>
       <p>Wherever you are, you’re never alone—come pray with us and be uplifted every day on Zoom.</p>
       <p><strong>Sunday to Friday</strong><br>6:00 AM &middot; 12:00 PM</p>
@@ -95,11 +99,14 @@
 </section>
 <section class="pastor-section">
     <div class="pastor-container">
-      <img src="assets/pastor.jpg" alt="Pastor Image" class="pastor-image" />
+      
       <div class="pastor-details">
         <h2>Meet Our Pastor</h2>
-        <p>Pastor John Smith leads our community with love and truth rooted in the Word of God. With a heart for service and a passion for outreach, he is dedicated to guiding the congregation spiritually and emotionally.</p>
+        <p><strong>Name:</strong> Pastor Brighton Kohlisa</p>
+        <p><strong>Email:</strong> email@harlowcentralsda.org</p>
+        <p>Pastor Brighton Kohlisa leads our community with love and truth rooted in the Word of God. With a heart for service and a passion for outreach, he is dedicated to guiding the congregation spiritually and emotionally.</p>
       </div>
+      <img src="assets/pastor.jpg" alt="Pastor Image" class="pastor-image" />
     </div>
   </section>
 <section id="watch-us-online">
@@ -121,36 +128,37 @@
 
   <div id="footer"></div>
   <script>
-
+// Load the navbar HTML
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
 
 //navbar dropdown
-document.addEventListener('DOMContentLoaded', function () {
-  const toggle = document.getElementById('departments-toggle');
-  const menu = document.getElementById('departments-menu');
-  let hideTimeout;
+const toggle = document.querySelector('.dropdown-wrapper');
+const menu = document.getElementById('departments-menu');
+let hideTimeout;
 
+if (toggle && menu) {
   function showMenu() {
     clearTimeout(hideTimeout);
     menu.classList.add('show');
   }
 
   function scheduleHideMenu() {
-  hideTimeout = setTimeout(() => {
-    menu.classList.remove('show');
-  }, 200); // or even 0
-}
+    hideTimeout = setTimeout(() => {
+      menu.classList.remove('show');
+    }, 200);
+  }
 
   toggle.addEventListener('mouseenter', showMenu);
   menu.addEventListener('mouseenter', showMenu);
 
   toggle.addEventListener('mouseleave', scheduleHideMenu);
   menu.addEventListener('mouseleave', scheduleHideMenu);
-});
-    // Load the navbar HTML
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-container').innerHTML = data;
+}
+
+    
   // Load the footer HTML
   fetch('footer.html')
     .then(response => response.text())

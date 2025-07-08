@@ -9,8 +9,8 @@ body {
   text-align: center;
   overflow-x: hidden !important;
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
-}
   
+  }
 
    html {
   -ms-overflow-style: none; 
@@ -89,16 +89,19 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #fff;
+  background-color: #fefefeec;
   min-width: 220px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
   z-index: 9999;
   border-radius: 6px;
-  padding: 1rem 0;
+  padding: 1.5rem 0.5rem;
   top: 100%;
-  left: 0;
-   cursor: pointer;
-   margin-left: 600px;
+  /* left: 50%; */  /* Commented out to align dropdown with right edge */
+  left: auto;
+  right: 70px;
+  /* transform: translateX(-50%); */  /* Commented out to align dropdown with right edge */
+  transform: none;
+  cursor: pointer;
 }
 
 /* Show dropdown on click (JavaScript adds 'show' class) */
@@ -121,9 +124,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .dropdown-group strong {
   display: block;
   padding: 0.5rem 1rem;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   color: #666;
   font-weight: 600;
 }
@@ -132,11 +135,12 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .dropdown-content a {
   display: flex;
   align-items: center;
-  padding: 0.6rem 1rem;
+  padding: 0.8rem 1.2rem;
   text-decoration: none;
   color: #333;
-  font-size: 0.95rem;
+  font-size: 1rem;
   transition: background-color 0.2s ease;
+  border-radius: 8px;
 }
 #departments-toggle {
   cursor: pointer;
@@ -147,6 +151,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   margin-right: 10px;
   min-width: 16px;
   text-align: center;
+  color: #1d3b64
 }
 
 /* Hover effect */
@@ -155,17 +160,17 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 /* Container for a row of 3 links */
 .dropdown-row {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 20px;
   padding: 0 1rem;
-  gap: 10px;
 }
 
 /* Each link inside a row */
 .dropdown-row a {
   flex: 1;
   text-align: left;
-  padding: 0.6rem;
+  padding: 0.75rem 1rem;
   color: #333;
   text-decoration: none;
   display: flex;
@@ -183,6 +188,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 /* Hover effect */
 .dropdown-row a:hover {
   background-color: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -201,9 +207,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     
     @media (max-width: 768px) {
       .logo-image{
-        margin-left: -5px;
-        height: 125px;
-        margin-top: 7px;
+        margin-left:-130px;
       }
       .halal-img{
         height: 60px;
@@ -247,7 +251,7 @@ color: #0a182b;
       border: none;
       cursor: pointer;
       margin-left: -10px;
-      margin-top: 10px;
+      margin-top: 25px;
     }
     
     .menu-icon {
@@ -297,7 +301,6 @@ color: #0a182b;
       }
   
     }
-
 
 
 /* prison ministry */ 

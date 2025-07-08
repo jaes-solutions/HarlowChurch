@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - HCSDA Church</title>
-  <link rel="stylesheet" href="about.css">
+  <title>Prayer Team - HCSDA Church</title>
+  <link rel="stylesheet" href="prayer-team.css">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,63 +14,40 @@
 </head>
 
 <body>
-<div class="hero-carousel" data-aos="fade-in">
-    <div class="slide active">
-      <img src="assets/s1.png" alt="Church">
-    </div>
-    <div class="slide">
-      <img src="assets/s2.png" alt="Event 1">
-    </div>
-    <div class="slide">
-      <img src="assets/s3.png" alt="Event 2">
-    </div>
-    <div class="slide">
-      <img src="assets/s4.png" alt="Community">
-    </div>
-    <button class="arrow left-arrow" onclick="changeSlide(-1)">&#10094;</button>
-    <button class="arrow right-arrow" onclick="changeSlide(1)">&#10095;</button>
-  </div>
 <div id="navbar-container"></div>
 
 
-<section class="about-church-section" data-aos="fade-up">
+<section class="importance-of-prayer big-section" data-aos="fade-up">
   <div class="container">
-    <h2 class="section-title">Welcome to the Harlow Seventh-day Adventist Church</h2>
-    <p class="intro-text">
-      Established in 1954, our church has been an integral part of the vibrant community of Harlow. Rooted in the principles of the Seventh-day Adventist faith, we are committed to spreading the message of God's love and salvation to our members and the wider community.
-    </p>
-    <p>
-      At Harlow SDA Church, we strive to create a warm and welcoming environment where individuals and families can grow spiritually and find meaningful connections. Our diverse congregation reflects the inclusive nature of our beliefs, embracing people from all walks of life.
-    </p>
-    <p>
-      We offer a range of services and activities designed to enrich the spiritual journey of our members, including worship services, Sabbath School classes, prayer meetings, and community outreach initiatives. Through these endeavors, we seek to make a positive impact on our local community and beyond.
-    </p>
-    <p>
-      Whether you are new to the area or looking for a church home, we invite you to join us at Harlow SDA Church. Explore our website to learn more about our beliefs, upcoming events, and how you can get involved. We look forward to welcoming you into our fellowship!
-    </p>
-        
+    <div class="content">
+      <div class="text">
+        <h2>The Power of Prayer</h2>
+        <p class="lead">Prayer is more than words — it’s our connection to God and our source of hope and strength.</p>
+        <p>At HCSDA Church, we stand firm in the belief that prayer changes things. Whether you're celebrating blessings or facing trials, you're not alone. Every prayer request submitted is carefully reviewed and lovingly lifted in prayer by our dedicated team. We’re here to walk with you in faith and intercede on your behalf.</p>
+      </div>
+      <div class="media">
+        <video autoplay muted loop >
+          <source src="assets/prayer.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="watch-usonline">
-  <h2>Watch Us Live</h2>
-  <p>You’re warmly invited to join us every Saturday at 10 AM.</p>
+<section class="prayer-request-section">
+  <div class="container">
+    <h2>Submit a Prayer Request</h2>
+    <p>We believe in the power of prayer. Fill out the form below, and our prayer team will uplift your request.</p>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Prayer Request" rows="5" required></textarea>
+      <button type="submit">Submit Prayer Request</button>
+    </form>
+  </div>
 </section>
-
-
-<button class="button-57" role="button" onclick="window.open('https://www.youtube.com/@harlowcommunitysdachurch3098/streams', '_blank')">
-  <span class="text">Hover over me!</span><span>We're Live</span>
-</button>
-
-
-
-
-
-
-
-
-
-
 
 <div id="footer"></div>
   <script>
@@ -104,25 +81,6 @@ if (toggle && menu) {
   menu.addEventListener('mouseleave', scheduleHideMenu);
 }
 
-//autoscroll 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.hero-carousel .slide');
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-  });
-}
-
-function changeSlide(direction) {
-  currentSlide = (currentSlide + direction + slides.length) % slides.length;
-  showSlide(currentSlide);
-}
-
-// Optional: Auto-advance every 5 seconds
-setInterval(() => {
-  changeSlide(1);
-}, 5000);
     
   // Load the footer HTML
   fetch('footer.html')

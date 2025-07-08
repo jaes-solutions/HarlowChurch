@@ -207,18 +207,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     
     @media (max-width: 768px) {
       .logo-image{
-        margin-left: -5px;
-        height: 125px;
-        margin-top: 7px;
+        margin-left:-130px;
       }
-      .halal-img{
-        height: 60px;
-     margin-top: 28px;
-     margin-right: -10px;
-    }
-    .salsa-img{
-     display: none;
-    }
+  
     }
     .nav-links {
       display: flex;
@@ -253,27 +244,27 @@ color: #0a182b;
       border: none;
       cursor: pointer;
       margin-left: -10px;
-      margin-top: 10px;
+      margin-top: 25px;
     }
     
     .menu-icon {
       width: 24px;
       height: 24px;
-      color: #333333;
+      color: white;
       transition: color 0.3s;
       margin-left: -10px;
       margin-top: 10px;
     }
     
     .menu-icon:hover {
-      color: #73a900;
+      color: #1d3b64;
     }
     
     .mobile-menu {
       background-color: #ffffff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 20px;
-      
+      margin-top: 30px;
     }
     
     .mobile-nav-link {
@@ -291,7 +282,6 @@ color: #0a182b;
     .hidden {
       display: none;
     }
-    
     /* Responsive design */
     @media (max-width: 768px) {
       .desktop-only {
@@ -306,6 +296,7 @@ color: #0a182b;
 
 
 
+
     
 
 /* Responsive image styles */
@@ -316,19 +307,49 @@ color: #0a182b;
   height: 100vh;
   overflow: hidden;
   position: relative;
-  margin-top: -30px;
+
   padding: 0;
   margin-bottom: -190px;
  
 }
-
-
 .responsive-image {
   max-width: 100%;
   height: auto;
   display: inline-block;
 }
+ .mobile-only-image-container {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
 
+.mobile-only-image-container img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .mobile-only-image-container {
+    display: block;
+  }
+}
+/* Show desktop image by default, hide mobile one */
+.mobile-only-image-container {
+  display: none;
+}
+
+/* On small screens, hide desktop image and show mobile */
+@media (max-width: 768px) {
+  .responsive-image-container {
+    display: none;
+  }
+
+  .mobile-only-image-container {
+    display: block;
+  }
+}
 
 
 /* button */
@@ -391,7 +412,7 @@ color: #0a182b;
   transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
   z-index: 100;
   opacity: 0;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translateY(225%) translateX(-50%);
   height: 26px;
@@ -680,7 +701,6 @@ color: #0a182b;
 }
 
 
-/* PRAYER LINE SECTION */
 .prayer-line-section {
   background-color: #1d3b64;
   padding: 60px 20px;
@@ -690,18 +710,17 @@ color: #0a182b;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  flex-direction: row;
 }
 
 .prayer-image {
-  flex: 1 1 400px;
+  flex: 1 1 45%;
   max-width: 500px;
   text-align: center;
-  margin-right: 30px;
-  margin-left: 50px;
 }
 
 .prayer-image img {
@@ -711,7 +730,7 @@ color: #0a182b;
 }
 
 .prayer-content {
-  flex: 1 1 500px;
+  flex: 1 1 50%;
   text-align: left;
 }
 
@@ -744,11 +763,9 @@ color: #0a182b;
   background-color: #2449c5;
 }
 
-/* Responsive for smaller screens */
 @media (max-width: 768px) {
   .prayer-line-container {
     flex-direction: column;
-    text-align: center;
   }
 
   .prayer-content {
