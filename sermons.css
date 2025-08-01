@@ -3,15 +3,19 @@ body {
   background: #0a182b;
   color: #222;
   margin: 0;
+   overflow-x: hidden !important;
   padding: 0;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
   text-align: center;
-  overflow-x: hidden !important;
+ 
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
   
   }
 
+  p {
+  font-family: 'Poppins', sans-serif;
+}
    html {
   -ms-overflow-style: none; 
   scrollbar-width: none;  
@@ -67,12 +71,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     
 .navbar {
       position: fixed;
-      
       top: 0;
       left: 0;
       width: 100%;
-  
-      background-color: #0a182b;
+   background-color: #0a182b;
       z-index: 50;
       transition: background-color 0.3s ease;
       padding-bottom: 30px;
@@ -202,7 +204,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     .logo-image{
       width: 70%;
       margin-top: 50px;
-      margin-left: -40px;
+      margin-left: -5px;
     }
     
     @media (max-width: 768px) {
@@ -214,7 +216,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     .nav-links {
       display: flex;
       gap: 2rem;
-      margin-right: 70px;
+      margin-left: 200px;
       margin-top: 30px;
       overflow-x: hidden !important;
     }
@@ -250,21 +252,21 @@ color: #0a182b;
     .menu-icon {
       width: 24px;
       height: 24px;
-      color: #333333;
+      color: white;
       transition: color 0.3s;
       margin-left: -10px;
       margin-top: 10px;
     }
     
     .menu-icon:hover {
-      color: #73a900;
+      color: #1d3b64;
     }
     
     .mobile-menu {
       background-color: #ffffff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 20px;
-      
+      margin-top: 30px;
     }
     
     .mobile-nav-link {
@@ -282,7 +284,6 @@ color: #0a182b;
     .hidden {
       display: none;
     }
-    
     /* Responsive design */
     @media (max-width: 768px) {
       .desktop-only {
@@ -294,6 +295,8 @@ color: #0a182b;
       }
   
     }
+
+
 
 
 /* ======= Modernized Video Section ======= */
@@ -382,7 +385,7 @@ color: #0a182b;
 .video-description {
   font-size: 1.3rem;
   font-weight: 500;
-  margin-top: -5px;
+  
   color: #aad4ff;
   text-align: left;
 }
@@ -391,7 +394,7 @@ color: #0a182b;
   font-size: 0.9rem;
   color: #ccc;
   text-align: left;
-  margin-top: -15px;
+  
 }
 
 .scroll-btn {
@@ -480,6 +483,55 @@ color: #0a182b;
     cursor: pointer;
     font-size: 1rem;
   }
+
+
+/* ======= Enhance Mobile Alignment for Video Section ======= */
+@media (max-width: 768px) {
+  .video-section {
+    padding: 60px 16px;
+  }
+
+  .video-heading {
+    font-size: 2rem;
+  }
+
+  .video-subtext {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .video-row {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .video-card {
+    width: 280px;
+  }
+
+  .video-description {
+    font-size: 1.1rem;
+  }
+
+  .video-date {
+    font-size: 0.8rem;
+  }
+
+  .video-modal-content {
+    max-width: 90%;
+    margin-top: 0;
+  }
+
+  .modal-controls {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px 20px;
+  }
+
+  .modal-controls button {
+    width: 100%;
+  }
+}
 
 
 

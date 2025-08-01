@@ -1,0 +1,310 @@
+body {
+  font-family: 'cinz', sans-serif;
+  background: #0a182b;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  text-align: center;
+  overflow-x: hidden !important;
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  
+  }
+
+  p {
+  font-family: 'Poppins', sans-serif;
+}
+   html {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+  overflow-x: hidden !important;
+}
+/* Hide scrollbar for Chrome, Safari and Opera 
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}*/
+  @font-face {
+  font-family: 'cinz';
+  src: url('assets/Cinzel-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'great';
+  src: url('assets/GreatVibes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+  @keyframes animate
+  {
+    0%{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    20% {
+      opacity: 0.01;  /* Fade out quickly within first 20% of animation */
+  }
+    100%{
+        opacity: 0;
+        transform: translate(var(--x), var(--y));
+    }
+  }
+  @media (max-width: 768px) {
+    html{
+      overflow-x: hidden;  /* Prevent horizontal scrolling */
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+  }
+  }
+
+    /* Navbar logo transition and scrolled state */
+#navbar-logo {
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled #navbar-logo {
+  content: url('assets/blue.png');
+}
+    
+.navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+   background-color: #0a182b;
+      z-index: 50;
+      transition: background-color 0.3s ease;
+      padding-bottom: 30px;
+      }
+        
+      
+      .navbar.scrolled {
+        background-color: #ffffffe7;
+        opacity: 0.9; /* Change to the color  */
+        color: #fff; /* Text color if needed */
+        
+      }
+/* Dropdown container still needs to be styled as before */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fefefeec;
+  min-width: 220px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  border-radius: 6px;
+  padding: 1.5rem 0.5rem;
+  top: 100%;
+  /* left: 50%; */  /* Commented out to align dropdown with right edge */
+  left: auto;
+  right: 70px;
+  /* transform: translateX(-50%); */  /* Commented out to align dropdown with right edge */
+  transform: none;
+  cursor: pointer;
+}
+
+/* Show dropdown on click (JavaScript adds 'show' class) */
+.dropdown-content.show {
+  display: block;
+}
+
+/* Each group in the dropdown */
+.dropdown-group {
+  padding: 0.25rem 0;
+  border-top: 1px solid #eee;
+}
+
+/* Remove top border for the first group */
+.dropdown-group:first-child {
+  border-top: none;
+}
+
+/* Group heading */
+.dropdown-group strong {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #666;
+  font-weight: 600;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  border-radius: 8px;
+}
+#departments-toggle {
+  cursor: pointer;
+  
+}
+/* Icon inside links */
+.dropdown-content a i {
+  margin-right: 10px;
+  min-width: 16px;
+  text-align: center;
+  color: #1d3b64
+}
+
+/* Hover effect */
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+}
+/* Container for a row of 3 links */
+.dropdown-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 20px;
+  padding: 0 1rem;
+}
+
+/* Each link inside a row */
+.dropdown-row a {
+  flex: 1;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+/* Icons inside links */
+.dropdown-row a i {
+  margin-right: 8px;
+}
+
+/* Hover effect */
+.dropdown-row a:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+    .navbar-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 2.5rem;
+    }
+    .logo-image{
+      width: 70%;
+      margin-top: 50px;
+      margin-left: -5px;
+    }
+    
+    @media (max-width: 768px) {
+      .logo-image{
+        margin-left:-130px;
+      }
+  
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      margin-left: 200px;
+      margin-top: 30px;
+      overflow-x: hidden !important;
+    }
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-link.scrolled{
+color: #0a182b;
+    }
+    .nav-link:hover {
+      color: #2d73d4;
+    }
+.navbar.scrolled .nav-link{
+  color: #0a182b;
+}
+    
+    
+    /* Mobile menu styles */
+    .mobile-only {
+      display: none;
+    }
+    
+    .menu-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: -10px;
+      margin-top: 25px;
+    }
+    
+    .menu-icon {
+      width: 24px;
+      height: 24px;
+      color: white;
+      transition: color 0.3s;
+      margin-left: -10px;
+      margin-top: 10px;
+    }
+    
+    .menu-icon:hover {
+      color: #1d3b64;
+    }
+    
+    .mobile-menu {
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-top: 30px;
+    }
+    
+    .mobile-nav-link {
+      display: block;
+      color: #333333;
+      text-decoration: none;
+      padding: 0.5rem 0;
+      transition: color 0.3s;
+    }
+    
+    .mobile-nav-link:hover {
+      color:#73a900;
+    }
+    
+    .hidden {
+      display: none;
+    }
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .desktop-only {
+        display: none;
+      }
+    
+      .mobile-only {
+        display: block;
+      }
+  
+    }
+
+
+ @keyframes zoomSlow {
+    0% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1.15);
+    }
+  }
+
+  .animate-zoom-slow {
+    animation: zoomSlow 20s ease-in-out infinite alternate;
+  }

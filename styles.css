@@ -12,6 +12,9 @@ body {
   
   }
 
+  p {
+  font-family: 'Poppins', sans-serif;
+}
    html {
   -ms-overflow-style: none; 
   scrollbar-width: none;  
@@ -67,12 +70,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     
 .navbar {
       position: fixed;
-      
       top: 0;
       left: 0;
       width: 100%;
-  
-      background-color: #0a182b;
+   background-color: #0a182b;
       z-index: 50;
       transition: background-color 0.3s ease;
       padding-bottom: 30px;
@@ -202,7 +203,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     .logo-image{
       width: 70%;
       margin-top: 50px;
-      margin-left: -40px;
+      margin-left: -5px;
     }
     
     @media (max-width: 768px) {
@@ -214,7 +215,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     .nav-links {
       display: flex;
       gap: 2rem;
-      margin-right: 70px;
+      margin-left: 200px;
       margin-top: 30px;
       overflow-x: hidden !important;
     }
@@ -309,7 +310,7 @@ color: #0a182b;
   position: relative;
 
   padding: 0;
-  margin-bottom: -190px;
+  margin-bottom: -160px;
  
 }
 .responsive-image {
@@ -779,7 +780,7 @@ color: #0a182b;
 
 
 
-/* Footer */
+/* Footer 
 .footer {
   background-color: #1d3b64;
   padding: 60px 20px 20px;
@@ -839,15 +840,20 @@ color: #0a182b;
   border:0;
   border-radius: 20px;
 }
-/* Footer bottom */
+
 .footer-bottom {
   margin-top: 40px;
   text-align: center;
   font-size: 14px;
-  color: #777;
+  color: #aaaaaa;
   position: relative;
 }
-
+.footer-bottom a {
+  color: #74a1df;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin: 0;
+}
 .footer-bottom .back-to-top {
   position: absolute;
   right: 20px;
@@ -859,6 +865,7 @@ color: #0a182b;
   padding: 8px 12px;
   border-radius: 50%;
   transition: background 0.3s ease, transform 0.3s ease;
+  
 }
 
 .footer-bottom .back-to-top:hover {
@@ -866,3 +873,4 @@ color: #0a182b;
   color: white;
   transform: scale(1.1);
 }
+*/

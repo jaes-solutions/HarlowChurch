@@ -12,6 +12,9 @@ body {
   
   }
 
+  p {
+  font-family: 'Poppins', sans-serif;
+}
    html {
   -ms-overflow-style: none; 
   scrollbar-width: none;  
@@ -67,12 +70,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     
 .navbar {
       position: fixed;
-      
       top: 0;
       left: 0;
       width: 100%;
-  
-      background-color: #0a182b;
+   background-color: #0a182b;
       z-index: 50;
       transition: background-color 0.3s ease;
       padding-bottom: 30px;
@@ -202,26 +203,19 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     .logo-image{
       width: 70%;
       margin-top: 50px;
-      margin-left: -40px;
+      margin-left: -5px;
     }
     
     @media (max-width: 768px) {
       .logo-image{
         margin-left:-130px;
       }
-      .halal-img{
-        height: 60px;
-     margin-top: 28px;
-     margin-right: -10px;
-    }
-    .salsa-img{
-     display: none;
-    }
+  
     }
     .nav-links {
       display: flex;
       gap: 2rem;
-      margin-right: 70px;
+      margin-left: 200px;
       margin-top: 30px;
       overflow-x: hidden !important;
     }
@@ -257,21 +251,21 @@ color: #0a182b;
     .menu-icon {
       width: 24px;
       height: 24px;
-      color: #333333;
+      color: white;
       transition: color 0.3s;
       margin-left: -10px;
       margin-top: 10px;
     }
     
     .menu-icon:hover {
-      color: #73a900;
+      color: #1d3b64;
     }
     
     .mobile-menu {
       background-color: #ffffff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 20px;
-      
+      margin-top: 30px;
     }
     
     .mobile-nav-link {
@@ -289,7 +283,6 @@ color: #0a182b;
     .hidden {
       display: none;
     }
-    
     /* Responsive design */
     @media (max-width: 768px) {
       .desktop-only {
@@ -304,140 +297,6 @@ color: #0a182b;
 
 
 
-   .big-section {
-  background-color: #0a182b;
-  padding: 100px 20px;
-  font-family: 'Poppins', sans-serif;
-  position: relative; /* Ensure shapes stay inside this section */
-  overflow: hidden;
-}
-
-.big-section .container {
-  max-width: 1200px;
-  margin: auto;
-}
-
-.big-section .content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-  align-items: center;
-}
-
-.big-section .text {
-  flex: 1;
-  min-width: 320px;
-}
-
-.big-section .text h2 {
-  font-size: 3rem;
-  font-weight: 600;
-  color: white;
-  margin-bottom: 20px;
-  text-align: right;
-}
-
-.big-section .text .lead {
-  font-size: 1rem;
-  color: #aaaaaa;
-  margin-bottom: 15px;
-  font-weight: 500;
-}
-
-.big-section .text p {
-  font-size: 1rem;
-  color: #aaaaaa;
-  line-height: 1.7;
-  margin-bottom: 15px;
-  text-align: right;
-}
-
-.big-section .media {
-  flex: 1;
-  min-width: 320px;
-  margin-top: 80px;
-}
-
-.big-section .media video {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Prayer Request Section */
-.prayer-request-section {
-   background: linear-gradient(to bottom, #1d3b64 0%, #0a182b 100%);
-  padding: 60px 20px;
-  
-}
-
-.prayer-request-section .container {
-  max-width: 700px;
-  margin: auto;
-  background: #fff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
-  
-}
-
-.prayer-request-section h2 {
-
-    font-family: 'cinz', sans-serif ;
-  
-  font-weight: 600;
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #333;
-  
-}
-
-.prayer-request-section p {
-  
-  color: #666;
-  margin-bottom: 30px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.prayer-request-section form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.prayer-request-section input,
-.prayer-request-section textarea {
-  padding: 12px 16px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-.prayer-request-section input:focus,
-.prayer-request-section textarea:focus {
-  border-color: #3b5998;
-  outline: none;
-}
-
-.prayer-request-section button {
-  padding: 12px;
-  background-color: #3b5998;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.prayer-request-section button:hover {
-  background-color: #2d4373;
-}
-
 
 
 
@@ -448,117 +307,3 @@ color: #0a182b;
 
 
 
-
-
-
-
-    /* Footer */
-.footer {
-  background-color: #1d3b64;
-  padding: 60px 20px 20px;
-  font-family: 'Poppins', sans-serif;
-  color: whitesmoke;
-  border-top: 1px solid #ddd;
-  
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 40px;
-}
-
-.footer-column {
-  flex: 1 1 250px;
-  min-width: 220px;
-  text-align: left;
-}
-
-.footer-column h3 {
-  font-family: 'cinz', sans-serif;
-  font-size: 20px;
-  margin-bottom: 12px;
-  color: #2772db;
-  font-weight: 600;
-  text-transform: uppercase;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 6px;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-column ul li {
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.footer-column ul li a {
-  color: whitesmoke;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-column ul li a:hover {
-  color: #2d73d4;
-}
-.footmap{
-  border:0;
-  border-radius: 20px;
-}
-/* Footer bottom */
-.footer-bottom {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 14px;
-  color: #777;
-  position: relative;
-}
-
-.footer-bottom .back-to-top {
-  position: absolute;
-  right: 20px;
-  top: 0;
-  font-size: 24px;
-  text-decoration: none;
-  color: white;
-  background: #b8b8b8;
-  padding: 8px 12px;
-  border-radius: 50%;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.footer-bottom .back-to-top:hover {
-  background: #2d73d4;
-  color: white;
-  transform: scale(1.1);
-}
-
-
-/* Decorative animated shapes for big-section */
-.big-section .shape {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  animation: floatShape 10s infinite ease-in-out;
-  z-index: 0;
-}
-
-.shape1 { top: 20%; left: 10%; animation-delay: 0s; }
-.shape2 { top: 70%; left: 20%; animation-delay: 2s; }
-.shape3 { top: 40%; right: 15%; animation-delay: 4s; }
-.shape4 { bottom: 15%; right: 10%; animation-delay: 6s; }
-.shape5 { bottom: 30%; left: 50%; animation-delay: 8s; }
-
-@keyframes floatShape {
-  0%, 100% { transform: translateY(0); opacity: 0.4; }
-  50% { transform: translateY(-20px); opacity: 0.8; }
-}

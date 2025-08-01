@@ -1,144 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - HCSDA Church</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Contact.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - HCSDA Church</title>
-  <link rel="stylesheet" href="Contact.css">
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-</head>
+  <body>
+    <div id="navbar-container"></div>
 
-<body>
-<div id="navbar-container"></div>
+    <!-- Hero Section with Background Video -->
+    <section
+      class="relative h-[70vh] md:h-[85vh] w-full overflow-hidden flex items-center justify-center text-white text-center bg-[#0a182b]"
+    >
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="assets/contact.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div
+        class="absolute inset-0 bg-black/10 flex items-center justify-center z-10"
+      >
+        <div class="text-center px-4">
+          <h1 class="text-4xl md:text-6xl font-bold" data-aos="fade-right">
+            Get in Touch with Us
+          </h1>
+          <p class="mt-4 text-lg" data-aos="fade-left">
+            Harlow Central Seventh-day Adventist Church
+          </p>
+        </div>
+      </div>
+    </section>
 
-<div class="contact-flex">
-  <section class="contact-section" data-aos="fade-up">
-    <div class="container">
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-    <div class="container">
-      <h2>Contact Information</h2>
-      <p><strong>Address:</strong> 123 Church Lane, Harlow, UK</p>
-      <p><strong>Phone:</strong> +44 1234 567890</p>
-      <p><strong>Email:</strong> info@harlowcentralsda.org</p>
-    </div>
-  </section>
+    <section class="bg-[#0a182b] text-white py-16 px-4">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Contact Form -->
+        <div
+          class="bg-white text-gray-900 rounded-lg shadow-lg p-8"
+          data-aos="zoom-in"
+        >
+          <h2 class="text-3xl font-bold mb-6" data-aos="fade-down">
+            Get In Touch
+          </h2>
+          <form class="space-y-4">
+            <div>
+              <label class="block text-sm text-left mb-1">Name</label>
+              <input
+                type="text"
+                placeholder="Your Name"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1e3a8a]"
+                required
+              />
+            </div>
+            <div>
+              <label class="block text-sm text-left mb-1">Email</label>
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1e3a8a]"
+                required
+              />
+            </div>
+            <div>
+              <label class="block text-sm text-left mb-1">Message</label>
+              <textarea
+                rows="5"
+                placeholder="Your Message"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1e3a8a]"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="bg-[#1e3a8a] text-white px-6 py-2 rounded-lg hover:bg-[#374ea2] transition duration-300"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
 
-  
+        <!-- Contact Info -->
+        <div
+          class="flex flex-col justify-center text-left space-y-6"
+          data-aos="fade-left"
+        >
+          <div>
+            <h2 class="text-3xl font-bold mb-2 text-white text-left">
+              Contact Details
+            </h2>
+            <p class="text-lg text-[#aaaaaa]">
+              We're here to help and answer any question you might have. We look
+              forward to hearing from you.
+            </p>
+          </div>
+          <div>
+            <p class="text-lg text-[#aaaaaa]">
+              <strong>Address:</strong> 123 Church Lane, Harlow, UK
+            </p>
+            <p class="text-lg text-[#aaaaaa]">
+              <strong>Phone:</strong> +44 1234 567890
+            </p>
+            <p class="text-lg text-[#aaaaaa]">
+              <strong>Email:</strong> info@harlowcentralsda.org
+            </p>
+          </div>
+          <div class="space-y-2 text-[#aaaaaa]">
+            <h3 class="text-xl font-semibold">Church Office Hours</h3>
+            <p>Mon – Thu: 9:00 AM – 5:00 PM</p>
+            <p>Friday: 9:00 AM – 2:00 PM</p>
+            <p>Sabbath & Sunday: Closed</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-[#aaaaaa]">Social Media</h3>
+            <div class="flex space-x-4 mt-2">
+              <a
+                href="https://www.facebook.com/people/Harlow-Central-Sda-Church/pfbid0GM84vFJkw7oRq1GGgzbMBpqAEGCZWmgw81Vbr9M2nRokFRxF8WsaXvH7fYRtfAcal/"
+                class="text-[#aaaaaa] hover:text-blue-400 text-xl"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@harlowcommunitysdachurch3098/streams"
+                class="text-[#aaaaaa] hover:text-blue-400 text-xl"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Ministries Contact Section
+    <section class="bg-white text-gray-900 py-16 px-4">
+      <div class="max-w-6xl mx-auto space-y-12">
+        <div>
+          <h2 class="text-2xl font-bold mb-4" data-aos="flip-left">
+            Ministry Contacts
+          </h2>
+          <p class="mb-6">
+            For ministry-specific queries, please reach out to our team leaders
+            below:
+          </p>
+          <ul class="space-y-3">
+            <li>
+              <strong>Children’s Ministry:</strong>
+              children@harlowcentralsda.org
+            </li>
+            <li>
+              <strong>Pathfinders & Adventurers:</strong>
+              pathfinders@harlowcentralsda.org
+            </li>
+            <li><strong>Youth Ministry:</strong> youth@harlowcentralsda.org</li>
+            <li>
+              <strong>Women’s Ministry:</strong> women@harlowcentralsda.org
+            </li>
+            <li><strong>Men’s Ministry:</strong> men@harlowcentralsda.org</li>
+          </ul>
+        </div>
+      </div>
+    </section> -->
 
+    <!-- Visiting Us Section -->
+    <section class="bg-[#0a182b] text-white py-16 px-4">
+      <div class="max-w-6xl mx-auto space-y-12">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center"
+          data-aos="flip-up"
+        >
+          Visiting Us
+        </h2>
 
+        <div class="rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in-up">
+          <iframe
+            class="w-full h-[300px] md:h-[400px]"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2463.6876487391545!2d0.09665137676724625!3d51.77209627182683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ea34aef07147%3A0xf9a7e0d1f3e790ed!2s123%20Church%20Ln%2C%20Harlow%2C%20UK!5e0!3m2!1sen!2sin!4v1692100000000!5m2!1sen!2sin"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+          <div class="bg-[#132238] p-6 rounded-lg shadow" data-aos="fade-right">
+            <h3 class="text-xl font-semibold mb-2 text-white">Location</h3>
+            <p class="text-[#dddddd] font-[Poppins]">
+              HCSDA Church Harberts Road, Harlow CM19 4AL
+            </p>
+          </div>
+          <div class="bg-[#132238] p-6 rounded-lg shadow" data-aos="fade-up">
+            <h3 class="text-xl font-semibold mb-2 text-white">
+              Worship Services
+            </h3>
+            <ul class="text-[#dddddd] space-y-1 font-[Poppins]">
+              <li><strong>Wednesday - Mid-Week Service:</strong> 07:00 PM</li>
+              <li>
+                <strong>Friday - Vespers Service:</strong> 07:30 PM & 08:30 PM
+              </li>
+              <li>
+                <strong>Saturday - Sabbath School:</strong> 09:30 AM & 10:50 AM
+              </li>
+              <li>
+                <strong>Saturday - Divine Service:</strong> 11:15 AM & 12:40 PM
+              </li>
+              <li>
+                <strong>Saturday - Pathfinder Club:</strong> 03:00 PM & 04:30 PM
+              </li>
+            </ul>
+          </div>
+          <div class="bg-[#132238] p-6 rounded-lg shadow" data-aos="fade-left">
+            <h3 class="text-xl font-semibold mb-2 text-white">
+              What to Expect
+            </h3>
+            <ul class="text-[#dddddd] space-y-1 font-[Poppins]">
+              <li>Welcoming and diverse community</li>
+              <li>Inspirational Bible-based messages</li>
+              <li>Engaging children's and youth programs</li>
+              <li>Live music and heartfelt worship</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section
+      class="relative z-20 bg-[#0a182b] text-white text-center pt-10 pb-6 mt-4"
+    >
+      <h2 class="text-4xl mb-2 text-white font-semibold">Watch Us Live</h2>
+      <p class="text-lg mb-10">
+        You’re warmly invited to join us every Saturday at 10 AM.
+      </p>
+      <button
+        class="relative z-20 mx-auto -mt-6 mb-5 overflow-hidden border-[6px] border-[#18181a] text-[#18181a] text-[28px] leading-8 px-7 py-5 bg-white rounded-full font-[cinz] cursor-pointer select-none group"
+        role="button"
+        onclick="window.open('https://www.youtube.com/@harlowcommunitysdachurch3098/streams', '_blank')"
+      >
+        <span
+          class="relative z-10 transition-all duration-[600ms] group-hover:opacity-0 group-hover:translate-y-[-100%]"
+        >
+          Hover over me!
+        </span>
+        <span
+          class="absolute z-20 text-white block opacity-0 top-1/2 left-1/2 transform -translate-x-1/2 translate-y-[100%] h-[26px] leading-[25px] whitespace-nowrap transition-all duration-[900ms] group-hover:opacity-100 group-hover:translate-y-[-50%]"
+        >
+          We're Live
+        </span>
+        <span
+          class="absolute bottom-[-50%] left-0 w-full h-full bg-[#1d3b64] transform origin-bottom scale-y-0 skew-y-[9.3deg] transition-transform duration-[600ms] group-hover:scale-y-[2]"
+        ></span>
+      </button>
+    </section>
 
+    <!-- Feedback Section -->
+    <section class="bg-[#0a182b] text-white py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2
+          class="relative z-20 bg-[#0a182b] font-semibold text-3xl text-white text-center mb-6"
+          data-aos="zoom-out"
+        >
+          Feedback & Suggestions
+        </h2>
+        <p class="mb-4">
+          Your feedback is valuable to us. Please feel free to share your
+          thoughts on how we can improve.
+        </p>
+        <a
+          href="Contact.html"
+          class="inline-block bg-[#1e3a8a] text-white px-6 py-3 rounded hover:bg-[#374ea2] transition"
+        >
+          Share Feedback
+        </a>
+      </div>
+    </section>
 
+    <div id="footer"></div>
+    <script>
+      // Load the navbar HTML
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
 
+          //navbar dropdown
+          const toggle = document.querySelector(".dropdown-wrapper");
+          const menu = document.getElementById("departments-menu");
+          let hideTimeout;
 
+          if (toggle && menu) {
+            function showMenu() {
+              clearTimeout(hideTimeout);
+              menu.classList.add("show");
+            }
 
+            function scheduleHideMenu() {
+              hideTimeout = setTimeout(() => {
+                menu.classList.remove("show");
+              }, 200);
+            }
 
+            toggle.addEventListener("mouseenter", showMenu);
+            menu.addEventListener("mouseenter", showMenu);
 
+            toggle.addEventListener("mouseleave", scheduleHideMenu);
+            menu.addEventListener("mouseleave", scheduleHideMenu);
+          }
 
+          // Load the footer HTML
+          fetch("footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+              document.getElementById("footer").innerHTML = data;
+            });
 
+          //mobile menu
+          window.addEventListener("scroll", function () {
+            const navbar = document.getElementById("navbar");
+            const navLinks = document.querySelectorAll(".nav-ser");
 
+            if (window.scrollY > 50) {
+              navbar.classList.add("scrolled");
+              navLinks.forEach((link) => link.classList.add("scrolled-link"));
+            } else {
+              navbar.classList.remove("scrolled");
+              navLinks.forEach((link) =>
+                link.classList.remove("scrolled-link")
+              );
+            }
+          });
 
-<div id="footer"></div>
-  <script>
-// Load the navbar HTML
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-container').innerHTML = data;
+          window.toggleMenu = function () {
+            const menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+          };
+        });
 
-//navbar dropdown
-const toggle = document.querySelector('.dropdown-wrapper');
-const menu = document.getElementById('departments-menu');
-let hideTimeout;
-
-if (toggle && menu) {
-  function showMenu() {
-    clearTimeout(hideTimeout);
-    menu.classList.add('show');
-  }
-
-  function scheduleHideMenu() {
-    hideTimeout = setTimeout(() => {
-      menu.classList.remove('show');
-    }, 200);
-  }
-
-  toggle.addEventListener('mouseenter', showMenu);
-  menu.addEventListener('mouseenter', showMenu);
-
-  toggle.addEventListener('mouseleave', scheduleHideMenu);
-  menu.addEventListener('mouseleave', scheduleHideMenu);
-}
-
-    
-  // Load the footer HTML
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    });
-
-
-
-
-//mobile menu
-       window.addEventListener('scroll', function () {
-  const navbar = document.getElementById('navbar');
-  const navLinks = document.querySelectorAll('.nav-ser');
-
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-    navLinks.forEach(link => link.classList.add('scrolled-link'));
-  } else {
-    navbar.classList.remove('scrolled');
-    navLinks.forEach(link => link.classList.remove('scrolled-link'));
-  }
-});
-
-        window.toggleMenu = function () {
-          const menu = document.getElementById('mobile-menu');
-          menu.classList.toggle('hidden');
+      // box- pages
+      document.querySelectorAll(".info-box").forEach((box) => {
+        box.addEventListener("click", () => {
+          const link = box.getAttribute("data-link");
+          if (link) {
+            window.location.href = link;
+          }
+        });
+      });
+      //footer
+      window.addEventListener("load", function () {
+        const yearSpan = document.getElementById("current-year");
+        if (yearSpan) {
+          yearSpan.textContent = new Date().getFullYear();
         }
       });
 
-
-// box- pages 
-document.querySelectorAll('.info-box').forEach(box => {
-  box.addEventListener('click',() => {
-    const link = box.getAttribute('data-link');
-    if(link){
-      window.location.href = link;
-    }
-  })
-})
-//footer
- window.addEventListener("load", function () {
-    const yearSpan = document.getElementById("current-year");
-    if (yearSpan) {
-      yearSpan.textContent = new Date().getFullYear();
-    }
-  });
-
-
-AOS.init({
-  duration: 1000
-});
-  </script>
-
-
-
-</body>
+      AOS.init({
+        duration: 1500,
+      });
+    </script>
+  </body>
 </html>

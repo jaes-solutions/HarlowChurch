@@ -12,6 +12,9 @@ body {
   
   }
 
+  p {
+  font-family: 'Poppins', sans-serif;
+}
    html {
   -ms-overflow-style: none; 
   scrollbar-width: none;  
@@ -67,12 +70,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     
 .navbar {
       position: fixed;
-      
       top: 0;
       left: 0;
       width: 100%;
-  
-      background-color: #0a182b;
+   background-color: #0a182b;
       z-index: 50;
       transition: background-color 0.3s ease;
       padding-bottom: 30px;
@@ -202,26 +203,19 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     .logo-image{
       width: 70%;
       margin-top: 50px;
-      margin-left: -40px;
+      margin-left: -5px;
     }
     
     @media (max-width: 768px) {
       .logo-image{
         margin-left:-130px;
       }
-      .halal-img{
-        height: 60px;
-     margin-top: 28px;
-     margin-right: -10px;
-    }
-    .salsa-img{
-     display: none;
-    }
+  
     }
     .nav-links {
       display: flex;
       gap: 2rem;
-      margin-right: 70px;
+      margin-left: 200px;
       margin-top: 30px;
       overflow-x: hidden !important;
     }
@@ -257,21 +251,21 @@ color: #0a182b;
     .menu-icon {
       width: 24px;
       height: 24px;
-      color: #333333;
+      color: white;
       transition: color 0.3s;
       margin-left: -10px;
       margin-top: 10px;
     }
     
     .menu-icon:hover {
-      color: #73a900;
+      color: #1d3b64;
     }
     
     .mobile-menu {
       background-color: #ffffff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 20px;
-      
+      margin-top: 30px;
     }
     
     .mobile-nav-link {
@@ -289,7 +283,6 @@ color: #0a182b;
     .hidden {
       display: none;
     }
-    
     /* Responsive design */
     @media (max-width: 768px) {
       .desktop-only {
@@ -303,159 +296,6 @@ color: #0a182b;
     }
 
 
-/* prison ministry */ 
-.prison-ministry-section {
-  padding: 60px 20px;
-  margin-top: 40px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.prison-ministry-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 30px;
-  text-align: right;
-}
-
-.prison-ministry-text {
-  flex: 1 1 500px;
-}
-
-.prison-ministry-text h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.prison-ministry-text p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-.prison-ministry-image {
-  flex: 1 1 400px;
-  text-align: center;
-}
-
-.prison-ministry-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-@media (max-width: 768px) {
-  .prison-ministry-content {
-    flex-direction: column;
-  }
-
-  .prison-ministry-image,
-  .prison-ministry-text {
-    text-align: center;
-  }
-}
-
-.community-outreach-section {
-  padding: 70px 20px;
-  
-  font-family: 'Poppins', sans-serif;
-}
-
-.community-outreach-content {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  padding: 40px;
-}
-
-.community-outreach-text {
-  padding-right: 10px;
-  text-align: left;
-}
-
-.community-outreach-text h2 {
-  font-size: 2.2rem;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.community-outreach-text p {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.7;
-}
-
-/* Incharge card inside outreach */
-.incharge-card {
-  
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-top: 30px;
-  margin-right: 100px;
-  padding: 15px 0px;
-  border-radius: 12px;
-  
-}
-
-.incharge-photo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #274472;
-}
-
-.incharge-details h4 {
-  margin: 0;
-  font-size: 1.15rem;
-  color: #274472;
-}
-
-.incharge-details p {
-  margin: 4px 0 0;
-  font-size: 0.95rem;
-  color: #666;
-}
-
-.community-outreach-image img {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .community-outreach-content {
-    grid-template-columns: 1fr;
-    padding: 30px 20px;
-    text-align: center;
-  }
-
-  .community-outreach-text {
-    padding-right: 0;
-  }
-
-  .incharge-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .incharge-photo {
-    width: 110px;
-    height: 110px;
-  }
-}
 
 
 
@@ -463,91 +303,3 @@ color: #0a182b;
 
 
 
-
-    /* Footer */
-.footer {
-  background-color: #1d3b64;
-  padding: 60px 20px 20px;
-  font-family: 'Poppins', sans-serif;
-  color: whitesmoke;
-  border-top: 1px solid #ddd;
-  
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 40px;
-}
-
-.footer-column {
-  flex: 1 1 250px;
-  min-width: 220px;
-  text-align: left;
-}
-
-.footer-column h3 {
-  font-family: 'cinz', sans-serif;
-  font-size: 20px;
-  margin-bottom: 12px;
-  color: #2772db;
-  font-weight: 600;
-  text-transform: uppercase;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 6px;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-column ul li {
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.footer-column ul li a {
-  color: whitesmoke;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-column ul li a:hover {
-  color: #2d73d4;
-}
-.footmap{
-  border:0;
-  border-radius: 20px;
-}
-/* Footer bottom */
-.footer-bottom {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 14px;
-  color: #777;
-  position: relative;
-}
-
-.footer-bottom .back-to-top {
-  position: absolute;
-  right: 20px;
-  top: 0;
-  font-size: 24px;
-  text-decoration: none;
-  color: white;
-  background: #b8b8b8;
-  padding: 8px 12px;
-  border-radius: 50%;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.footer-bottom .back-to-top:hover {
-  background: #2d73d4;
-  color: white;
-  transform: scale(1.1);
-}

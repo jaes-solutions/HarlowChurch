@@ -1,154 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pathfinders - HCSDA Church</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="personal-ministries.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pathfinders - HCSDA Church</title>
-  <link rel="stylesheet" href="personal-ministries.css">
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-</head>
+  <body>
+    <div id="navbar-container"></div>
 
-<body>
-
-  <div id="navbar-container"></div>
-
-
-
-
-  
-
-  <section class="prison-ministry-section" data-aos="fade-up">
-    <div class="prison-ministry-content">
-      <div class="prison-ministry-text">
-        <h2>Prison Ministries</h2>
-        <p>The Prison Ministries Department is dedicated to reaching prisoners and offenders across southern England through a wide range of compassionate and transformative initiatives. These include Bible study programs that offer spiritual growth, uplifting choir performances that bring hope and encouragement, and thought-provoking lectures designed to educate and inspire. By entering prisons and detention centres with messages of faith, redemption, and support, the department seeks to make a lasting impact on the lives of inmates and contribute to their journey of personal and spiritual restoration.”
-</p>
+    <section
+      class="bg-[#0a182b] py-[60px] px-5 mt-10 font-[Poppins]"
+      data-aos="fade-up"
+    >
+      <div
+        class="flex flex-wrap items-center justify-between max-w-[1200px] mx-auto gap-8 text-right"
+      >
+        <div class="flex-1 min-w-[300px] max-w-[600px]">
+          <h2 class="text-3xl mb-5 text-white">Prison Ministries</h2>
+          <p class="text-base text-[#555] leading-relaxed">
+            The Prison Ministries Department is passionately devoted to sharing
+            messages of hope, redemption and transformation with those within
+            correctional facilities. Through regular Bible study sessions,
+            heartfelt musical performances, and inspirational talks, the team
+            provides spiritual support and encouragement to individuals
+            navigating incarceration. These efforts aim to nurture personal
+            growth, help restore broken lives, and offer a renewed sense of
+            purpose to those often forgotten by society.
+          </p>
+        </div>
+        <div class="flex-1 min-w-[300px] text-center">
+          <img
+            src="assets/prison.png"
+            alt="Prison Ministry"
+            class="max-w-full h-auto rounded-lg"
+          />
+        </div>
       </div>
-      <div class="prison-ministry-image">
-        <img src="assets/prison.png" alt="Prison Ministry" />
+    </section>
+
+    <section class="py-[70px] px-5 font-[Poppins]" data-aos="fade-up">
+      <div
+        class="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-10 items-center rounded-[20px] shadow-[0_10px_30px_rgba(0,0,0,0.05)] p-10"
+      >
+        <div>
+          <img
+            src="assets/outr.png"
+            alt="Community Outreach"
+            class="w-full rounded-[16px] shadow-[0_4px_15px_rgba(0,0,0,0.07)]"
+          />
+        </div>
+        <div class="text-left md:pl-6">
+          <h2 class="text-[2.2rem] text-white mb-5">Community Outreach</h2>
+          <p class="text-[1.05rem] text-[#555] leading-[1.7]">
+            Our Community Outreach Ministry is at the heart of service in
+            action—engaging with the needs of the local population through
+            charitable events, practical assistance, and meaningful
+            interactions. From distributing essential supplies and providing
+            free health services to offering workshops that empower and uplift,
+            the ministry exemplifies Christ’s love through genuine, hands-on
+            compassion. It is a bridge between the church and the community,
+            helping build stronger, more connected lives.
+          </p>
+          <div
+            class="flex items-center gap-4 mt-8 mr-24 py-4 rounded-xl md:flex-row flex-col text-center md:text-left"
+          >
+            <img
+              src="assets/donnyhalder.png"
+              alt="Mr. Donny Halder"
+              class="w-[200px] h-[200px] md:w-[200px] md:h-[200px] rounded-full object-cover border-2 border-[#274472]"
+            />
+            <div>
+              <h4 class="text-[1.15rem] text-[#274472] m-0">
+                Eld. Donny Halder
+              </h4>
+              <p class="text-[0.95rem] text-[#666] mt-1">
+                Outreach & Prison Ministries Incharge
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="community-outreach-section" data-aos="fade-up">
-    <div class="community-outreach-content">
-      <div class="community-outreach-image">
-        <img src="assets/community-outreach.jpg" alt="Community Outreach" />
+    <section class="py-[70px] px-5 font-[Poppins]" data-aos="fade-up">
+      <div
+        class="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-10 items-center rounded-[20px] shadow-[0_10px_30px_rgba(0,0,0,0.05)] p-10"
+      >
+        <div class="text-right md:pl-6">
+          <h2 class="text-[2.2rem] text-white mb-5">Health Ministries</h2>
+          <p class="text-[1.05rem] text-[#555] leading-[1.7]">
+            The Health Ministries Department promotes a wholistic approach to
+            wellbeing, recognising that physical, mental and spiritual health
+            are deeply intertwined. Through a variety of educational seminars,
+            lifestyle programmes, and community health screenings, it empowers
+            individuals to make informed choices towards healthier living.
+            Rooted in Christian values, our health initiatives aim to support
+            both preventive care and personal transformation.
+          </p>
+          <div
+            class="flex items-center gap-4 mt-8 mr-24 py-4 rounded-xl md:flex-row flex-col text-right md:text-left"
+          >
+            <img
+              src="assets/placeholder.png"
+              alt="Sis. Madhavi"
+              class="w-[200px] h-[200px] md:w-[200px] md:h-[200px] rounded-full object-cover border-2 border-[#274472]"
+            />
+            <div>
+              <h4 class="text-[1.15rem] text-[#274472] m-0">Sis. Madhavi</h4>
+              <p class="text-[0.95rem] text-[#666] mt-1">
+                Health Ministries Incharge
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            src="assets/health.png"
+            alt="Community Outreach"
+            class="w-full rounded-[16px] shadow-[0_4px_15px_rgba(0,0,0,0.07)]"
+          />
+        </div>
       </div>
-      <div class="community-outreach-text">
-        <h2>Community Outreach</h2>
-        <p>The Community Outreach Department is committed to connecting with the local community through acts of kindness, service projects, and support initiatives. Whether it's distributing food, offering free health checks, or hosting educational workshops, the goal is to demonstrate God’s love in practical ways. By engaging directly with people’s needs, the department brings hope, relief, and a sense of belonging to those it serves.</p>
-        <div class="incharge-card">
-  <img src="assets/donny-halder.jpg" alt="Mr. Donny Halder" class="incharge-photo">
-  <div class="incharge-details">
-    <h4>Mr. Donny Halder</h4>
-    <p>Community Outreach Incharge</p>
-  </div>
-</div>
+    </section>
+
+    <section class="py-[70px] px-5 font-[Poppins]" data-aos="fade-up">
+      <div
+        class="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-10 items-center rounded-[20px] shadow-[0_10px_30px_rgba(0,0,0,0.05)] p-10"
+      >
+        <div>
+          <img
+            src="assets/outr.png"
+            alt="Community Outreach"
+            class="w-full rounded-[16px] shadow-[0_4px_15px_rgba(0,0,0,0.07)]"
+          />
+        </div>
+        <div class="text-left md:pl-6">
+          <h2 class="text-[2.2rem] text-white mb-5">Men's Ministries</h2>
+          <p class="text-[1.05rem] text-[#555] leading-[1.7]">
+            Men’s Ministries provides a space for men to grow in faith, develop
+            character, and lead with integrity within their families,
+            workplaces, and the church. Through mentoring groups, prayer
+            breakfasts, retreats and service projects, the ministry encourages
+            men to live out their God-given roles with strength and humility. It
+            seeks to cultivate spiritual resilience and foster meaningful
+            relationships among men of all ages and backgrounds.
+          </p>
+          <div
+            class="flex items-center gap-4 mt-8 mr-24 py-4 rounded-xl md:flex-row flex-col text-center md:text-left"
+          >
+            <img
+              src="assets/placeholder.png"
+              alt="Mr. Donny Halder"
+              class="w-[200px] h-[200px] md:w-[200px] md:h-[200px] rounded-full object-cover border-2 border-[#274472]"
+            />
+            <div>
+              <h4 class="text-[1.15rem] text-[#274472] m-0">
+                Bro. Anoop Murala
+              </h4>
+              <p class="text-[0.95rem] text-[#666] mt-1">
+                Men's Ministries Incharge
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      
-    </div>
-  </section>
+    </section>
 
+    <div id="footer"></div>
+    <script>
+      // Load the navbar HTML
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
 
+          //navbar dropdown
+          const toggle = document.querySelector(".dropdown-wrapper");
+          const menu = document.getElementById("departments-menu");
+          let hideTimeout;
 
-  <div id="footer"></div>
-  <script>
-//navbar dropdown
-document.addEventListener('DOMContentLoaded', function () {
-  const toggle = document.getElementById('departments-toggle');
-  const menu = document.getElementById('departments-menu');
-  let hideTimeout;
+          if (toggle && menu) {
+            function showMenu() {
+              clearTimeout(hideTimeout);
+              menu.classList.add("show");
+            }
 
-  function showMenu() {
-    clearTimeout(hideTimeout);
-    menu.classList.add('show');
-  }
+            function scheduleHideMenu() {
+              hideTimeout = setTimeout(() => {
+                menu.classList.remove("show");
+              }, 200);
+            }
 
-  function scheduleHideMenu() {
-    hideTimeout = setTimeout(() => {
-      menu.classList.remove('show');
-    }, 800); // 1000 seconds
-  }
+            toggle.addEventListener("mouseenter", showMenu);
+            menu.addEventListener("mouseenter", showMenu);
 
-  toggle.addEventListener('mouseenter', showMenu);
-  menu.addEventListener('mouseenter', showMenu);
+            toggle.addEventListener("mouseleave", scheduleHideMenu);
+            menu.addEventListener("mouseleave", scheduleHideMenu);
+          }
 
-  toggle.addEventListener('mouseleave', scheduleHideMenu);
-  menu.addEventListener('mouseleave', scheduleHideMenu);
+          // scroll behavior and mobile menu
+          setTimeout(() => {
+            const navbar = document.getElementById("navbar");
+            const navLinks = document.querySelectorAll(".nav-ser");
 
-  // Toggle videos based on screen width
-  const desktopVideo = document.getElementById('desktop-video');
-  const mobileVideo = document.getElementById('mobile-video');
+            function handleScroll() {
+              if (window.scrollY >= 100) {
+                navbar.classList.add("scrolled");
+                navLinks.forEach((link) => link.classList.add("scrolled-link"));
+              } else {
+                navbar.classList.remove("scrolled");
+                navLinks.forEach((link) =>
+                  link.classList.remove("scrolled-link")
+                );
+              }
+            }
 
-  function toggleVideoDisplay() {
-    if (window.innerWidth <= 765) {
-      desktopVideo.style.display = 'none';
-      mobileVideo.style.display = 'block';
-    } else {
-      desktopVideo.style.display = 'block';
-      mobileVideo.style.display = 'none';
-    }
-  }
+            handleScroll(); // ensure initial check
+            window.addEventListener("scroll", handleScroll);
 
-  toggleVideoDisplay();
-  window.addEventListener('resize', toggleVideoDisplay);
-});
-    // Load the navbar HTML
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-container').innerHTML = data;
-  // Load the footer HTML
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    });
-
-
-
-
-//mobile menu
-       window.addEventListener('scroll', function () {
-  const navbar = document.getElementById('navbar');
-  const navLinks = document.querySelectorAll('.nav-ser');
-
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-    navLinks.forEach(link => link.classList.add('scrolled-link'));
-  } else {
-    navbar.classList.remove('scrolled');
-    navLinks.forEach(link => link.classList.remove('scrolled-link'));
-  }
-});
-
-        window.toggleMenu = function () {
-          const menu = document.getElementById('mobile-menu');
-          menu.classList.toggle('hidden');
-        }
+            window.toggleMenu = function () {
+              const menu = document.getElementById("mobile-menu");
+              menu.classList.toggle("hidden");
+            };
+          }, 50);
+        });
+      // Load the footer HTML
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+      AOS.init({
+        duration: 1000,
       });
-
-    //footer
- window.addEventListener("load", function () {
-    const yearSpan = document.getElementById("current-year");
-    if (yearSpan) {
-      yearSpan.textContent = new Date().getFullYear();
-    }
-  });
-
-
-AOS.init({
-  duration: 1000
-});
-  </script>
-
-
-
-</body>
+    </script>
+  </body>
 </html>
