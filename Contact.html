@@ -187,51 +187,65 @@
     <section class="bg-[#0a182b] text-white py-16 px-4">
       <div class="max-w-6xl mx-auto space-y-12">
         <h2
-          class="text-3xl md:text-4xl font-bold text-center"
+          class="text-3xl md:text-4xl font-bold text-white text-center"
           data-aos="flip-up"
         >
           Visiting Us
         </h2>
 
-        <div class="rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in-up">
-          <iframe
-            class="w-full h-[300px] md:h-[400px]"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2463.6876487391545!2d0.09665137676724625!3d51.77209627182683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ea34aef07147%3A0xf9a7e0d1f3e790ed!2s123%20Church%20Ln%2C%20Harlow%2C%20UK!5e0!3m2!1sen!2sin!4v1692100000000!5m2!1sen!2sin"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6"
+          data-aos="zoom-in-up"
+        >
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <h4 class="text-sm font-semibold text-white text-left mb-2">
+              Friday Church Location
+            </h4>
+            <iframe
+              class="w-full h-[250px] md:h-[300px]"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.085314934661!2d0.08368367652230414!3d51.76804749162915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d89d0025ae6b61%3A0xcb763d9cc0ed35ea!2sHCSDA%20Church!5e0!3m2!1sen!2sin!4v1750765294578!5m2!1sen!2sin"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <h4 class="text-sm text-right font-semibold text-white mb-2">
+              Saturday Church Location
+            </h4>
+            <iframe
+              class="w-full h-[250px] md:h-[300px]"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.8945055970235!2d0.0892741!3d51.753252599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d89f5d878d4411%3A0x6be64ca20c4b3581!2sStaple%20Tye%20St%20James!5e0!3m2!1sen!2sin!4v1754982786168!5m2!1sen!2sin"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-          <div class="bg-[#132238] p-6 rounded-lg shadow" data-aos="fade-right">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center text-left"
+        >
+          <div
+            class="bg-[#132238] p-6 rounded-lg shadow h-full"
+            data-aos="fade-right"
+          >
             <h3 class="text-xl font-semibold mb-2 text-white">Location</h3>
+            <p class="text-[#dddddd] font-[Poppins] mb-2">
+              <strong>Friday Church:</strong> HCSDA Church, Harberts Road,
+              Harlow CM19 4AL
+            </p>
             <p class="text-[#dddddd] font-[Poppins]">
-              HCSDA Church Harberts Road, Harlow CM19 4AL
+              <strong>Saturday Church:</strong> St James Church, Perry Rd,
+              Harlow CM18 7NP
             </p>
           </div>
-          <div class="bg-[#132238] p-6 rounded-lg shadow" data-aos="fade-up">
-            <h3 class="text-xl font-semibold mb-2 text-white">
-              Worship Services
-            </h3>
-            <ul class="text-[#dddddd] space-y-1 font-[Poppins]">
-              <li><strong>Wednesday - Mid-Week Service:</strong> 07:00 PM</li>
-              <li>
-                <strong>Friday - Vespers Service:</strong> 07:30 PM & 08:30 PM
-              </li>
-              <li>
-                <strong>Saturday - Sabbath School:</strong> 09:30 AM & 10:50 AM
-              </li>
-              <li>
-                <strong>Saturday - Divine Service:</strong> 11:15 AM & 12:40 PM
-              </li>
-              <li>
-                <strong>Saturday - Pathfinder Club:</strong> 03:00 PM & 04:30 PM
-              </li>
-            </ul>
-          </div>
-          <div class="bg-[#132238] p-6 rounded-lg shadow" data-aos="fade-left">
+          <div
+            class="bg-[#132238] p-6 rounded-lg shadow h-full"
+            data-aos="fade-left"
+          >
             <h3 class="text-xl font-semibold mb-2 text-white">
               What to Expect
             </h3>
@@ -242,6 +256,103 @@
               <li>Live music and heartfelt worship</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#0a182b] text-white py-16 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl text-white font-bold mb-6 text-center">
+          Worship Services Schedule
+        </h2>
+        <div class="overflow-x-auto">
+          <table class="min-w-full border border-gray-600 text-left text-lg">
+            <thead class="bg-[#132238]">
+              <tr>
+                <th class="py-4 px-6 border-b border-gray-600">Day</th>
+                <th class="py-4 px-6 border-b border-gray-600">Service</th>
+                <th class="py-4 px-6 border-b border-gray-600">Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-[#1d2d44]">
+                <td class="py-4 px-6 border-b border-gray-600">Wednesday</td>
+                <td class="py-4 px-6 border-b border-gray-600">
+                  Mid-Week Service
+                  <div class="text-xs text-gray-400 mt-1">
+                    Meeting ID: 815 0634 9938 | Passcode: 707 |
+                    <a
+                      href="https://us06web.zoom.us/j/81506349938?pwd=707"
+                      class="text-blue-400 hover:text-blue-300"
+                      target="_blank"
+                      >Join Here</a
+                    >
+                  </div>
+                </td>
+                <td class="py-4 px-6 border-b border-gray-600">07:00 PM</td>
+              </tr>
+              <tr class="hover:bg-[#1d2d44]">
+                <td class="py-4 px-6 border-b border-gray-600">Friday</td>
+                <td class="py-4 px-6 border-b border-gray-600">
+                  Vespers Service
+                  <div class="text-xs text-gray-400 mt-1">
+                    <a
+                      href="https://www.youtube.com/@harlowcommunitysdachurch3098/streams"
+                      class="text-blue-400 hover:text-blue-300"
+                      target="_blank"
+                      >Watch Here</a
+                    >
+                  </div>
+                </td>
+                <td class="py-4 px-6 border-b border-gray-600">
+                  07:30 PM - 08:30 PM
+                </td>
+              </tr>
+              <tr class="hover:bg-[#1d2d44]">
+                <td class="py-4 px-6 border-b border-gray-600">Saturday</td>
+                <td class="py-4 px-6 border-b border-gray-600">
+                  Sabbath School
+                  <div class="text-xs text-gray-400 mt-1">
+                    <a
+                      href="https://www.youtube.com/@harlowcommunitysdachurch3098/streams"
+                      class="text-blue-400 hover:text-blue-300"
+                      target="_blank"
+                      >Watch Here</a
+                    >
+                  </div>
+                </td>
+                <td class="py-4 px-6 border-b border-gray-600">
+                  09:30 AM - 10:50 AM
+                </td>
+              </tr>
+              <tr class="hover:bg-[#1d2d44]">
+                <td class="py-4 px-6 border-b border-gray-600">Saturday</td>
+                <td class="py-4 px-6 border-b border-gray-600">
+                  Divine Service
+                  <div class="text-xs text-gray-400 mt-1">
+                    <a
+                      href="https://www.youtube.com/@harlowcommunitysdachurch3098/streams"
+                      class="text-blue-400 hover:text-blue-300"
+                      target="_blank"
+                      >Watch Here</a
+                    >
+                  </div>
+                </td>
+                <td class="py-4 px-6 border-b border-gray-600">
+                  11:15 AM - 01:00 PM
+                </td>
+              </tr>
+              <tr class="hover:bg-[#1d2d44]">
+                <td class="py-4 px-6 border-b border-gray-600">Saturday</td>
+                <td class="py-4 px-6 border-b border-gray-600">
+                  Pathfinder Club
+                </td>
+                <td class="py-4 px-6 border-b border-gray-600">
+                  03:00 PM - 04:30 PM
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
