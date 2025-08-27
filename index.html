@@ -4,6 +4,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harlow Central SDA Church</title>
+    <link rel="icon" href="favicon.ico" />
+    <!-- Standard Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+
+    <!-- Apple Touch Icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+
+    <!-- Android / Chrome -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/android-chrome-512x512.png"
+    />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/site.webmanifest" />
+
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#0a182b" />
+    <meta name="msapplication-TileColor" content="#0a182b" />
+
+    <meta
+      name="description"
+      content="Welcome to Harlow Central Seventh-day Adventist Church. Join us for Sabbath services, sermons, youth ministries, Adventurers, Pathfinders, personal ministries, prayer groups, and community outreach in Harlow, UK."
+    />
+    <meta
+      name="keywords"
+      content="Harlow Central SDA Church, Harlow Seventh-day Adventist, SDA Church UK, Sabbath worship Harlow, Adventist sermons, Youth ministry Harlow, Adventurers Club, Pathfinders Club, Personal Ministries, Prayer group, Christian outreach Harlow, SDA live stream, Bible study Harlow, Harlow church community, SDA church services UK"
+    />
+    <meta name="author" content="Harlow Central SDA Church" />
+
+    <!-- Open Graph / Facebook -->
+    <meta
+      property="og:title"
+      content="Harlow Central SDA Church - Worship, Ministries & Outreach"
+    />
+    <meta
+      property="og:description"
+      content="Discover Harlow Central SDA Church: Sabbath worship, livestreams, Adventurers, Pathfinders, youth ministries, outreach, and prayer groups in Harlow."
+    />
+    <meta
+      property="og:image"
+      content="https://www.harlowsdachurch.org/assets/harlow-home-preview.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.harlowsdachurch.org/" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Harlow Central SDA Church - Worship, Ministries & Outreach"
+    />
+    <meta
+      name="twitter:description"
+      content="Join Harlow Central SDA Church for Sabbath services, live sermons, youth and children’s ministries, and community outreach."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.harlowsdachurch.org/assets/harlow-home-preview.jpg"
+    />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.harlowsdachurch.org/" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
 
@@ -71,15 +158,16 @@
         <h3>Sermons</h3>
         <p>Join us every Saturday for uplifting services.</p>
       </div>
-      <div class="info-box" data-link="testimonies.html">
+      <div class="info-box" data-link="personal-ministries.html">
         <img src="assets/test.png" alt="Testimonies" class="info-img" />
-        <h3>Testimonies</h3>
+        <h3>Personal Ministries</h3>
         <p>Be inspired by stories of faith and personal experiences.</p>
       </div>
-      <div class="info-box" data-link="sermons.html">
-        <img src="assets/sabschool.png" alt="Sabbath School" class="info-img" />
-        <h3>Sabbath School</h3>
-        <p>Deepen your faith with our lesson study sessions.</p>
+
+      <div class="info-box" data-link="pathfinders.html#adventurers-info">
+        <img src="assets/childr.png" alt="Children" class="info-img" />
+        <h3>Adventurers</h3>
+        <p>Fun, faith-filled programs designed for children of all ages.</p>
       </div>
       <div class="info-box" data-link="pathfinders.html#pathfinders">
         <img src="assets/path.png" alt="Pathfinders" class="info-img" />
@@ -89,9 +177,14 @@
           youth.
         </p>
       </div>
-      <div class="info-box" data-link="outreach.html">
+      <div class="info-box" data-link="sermons.html">
+        <img src="assets/sabschool.png" alt="Sabbath School" class="info-img" />
+        <h3>Sabbath School</h3>
+        <p>Deepen your faith with our lesson study sessions.</p>
+      </div>
+      <div class="info-box" data-link="prayer-team.html">
         <img src="assets/out.png" alt="Outreach & Prayer" class="info-img" />
-        <h3>Outreach & Prayer</h3>
+        <h3>Prayer Team</h3>
         <p>Be a part of outreach and volunteering efforts.</p>
       </div>
       <div class="info-box" data-link="youth.html">
@@ -99,14 +192,10 @@
         <h3>Youth</h3>
         <p>Empowering our youth through faith-based activities.</p>
       </div>
-      <div class="info-box" data-link="children.html">
-        <img src="assets/childr.png" alt="Children" class="info-img" />
-        <h3>Children</h3>
-        <p>Fun, faith-filled programs designed for children of all ages.</p>
-      </div>
+
       <div class="info-box" data-link="pathfinders.html">
         <img src="assets/adul.png" alt="Adults" class="info-img" />
-        <h3>Adults</h3>
+        <h3>Outreach</h3>
         <p>Faith-enriching programs and discussions for adults.</p>
       </div>
     </div>
@@ -149,14 +238,17 @@
       <div class="pastor-container">
         <div class="pastor-details">
           <h2>Meet Our Pastor</h2>
-          <p><strong>Name:</strong> Pastor Brighton Kohlisa</p>
-          <p><strong>Email:</strong> email@harlowcentralsda.org</p>
+          <p class="pastile">Pastor Brighton Kohlisa</p>
+
           <p>
             Pastor Brighton Kohlisa leads our community with love and truth
             rooted in the Word of God. With a heart for service and a passion
             for outreach, he is dedicated to guiding the congregation
             spiritually and emotionally.
           </p>
+          <a href="Contact.html" target="_blank" class="watch-live-btn"
+            >Contact</a
+          >
         </div>
         <img
           src="assets/BrightonKohlisa.png"

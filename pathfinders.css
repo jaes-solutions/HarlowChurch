@@ -208,7 +208,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     
     @media (max-width: 768px) {
       .logo-image{
-        margin-left:-130px;
+        margin-left:-10px;
+        width: 60%;
       }
   
     }
@@ -217,6 +218,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
       gap: 2rem;
       margin-left: 200px;
       margin-top: 30px;
+      margin-right: 40px;
       overflow-x: hidden !important;
     }
     .nav-link {
@@ -244,14 +246,14 @@ color: #0a182b;
       background: none;
       border: none;
       cursor: pointer;
-      margin-left: -10px;
+      margin-right: 20px;
       margin-top: 25px;
     }
     
     .menu-icon {
       width: 24px;
       height: 24px;
-      color: white;
+      color: rgb(255, 255, 255);
       transition: color 0.3s;
       margin-left: -10px;
       margin-top: 10px;
@@ -285,15 +287,20 @@ color: #0a182b;
     }
     /* Responsive design */
     @media (max-width: 768px) {
+    
+ 
       .desktop-only {
-        display: none;
+        display: none !important;
       }
     
       .mobile-only {
-        display: block;
+        display: block !important;
       }
-  
+
+      
     }
+
+
 
 
 
@@ -321,209 +328,6 @@ color: #0a182b;
 }
 
 
-.club-logo {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.club-logo img {
-  max-width: 120px;
-  height: auto;
-  display: inline-block;
-}
-/* Pathfinders Section Styles */
-.pathfinders-info {
-  max-width:1100px;
-  margin: 0 auto;
-  padding: 50px 20px;
-  font-family: 'Poppins', sans-serif;
-  background-color: #0a182b;
-  border-radius: 12px;
-  text-align: left;
-}
-
-.pathfinders-info h2 {
-  color: white;
-  font-weight: 600;
-  margin-bottom: 20px;
-  font-size: 28px;
-}
-
-.pathfinders-info p {
-  color: #858585;
-  line-height: 1.7;
-  margin-bottom: 30px;
-  font-size: 16px;
-}
-
-.pathfinders-info ul {
-  padding-left: 20px;
-  margin-bottom: 30px;
-}
-
-.pathfinders-info ul li {
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: #858585;
-  line-height: 1.6;
-}
-
-.pathfinders-images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 30px;
-  justify-content: center;
-}
-
-.pathfinders-images img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
-}
-
-/* adventurers */
-.adventurer-classes {
-  padding: 4rem 8rem;
-  background-color: #0a182b;
-  font-family: 'Poppins', sans-serif;
-}
-.ad{
-   color: white;
-  font-weight: 600;
-  margin-bottom: 20px;
-  font-size: 28px;
-}
-.adp{
-color: #858585;
-}
-.adventurer-class {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-  gap: 2rem;
-}
-
-.adventurer-content {
-  flex: 1 1 60%;
-  text-align: left;
-}
-
-.adventurer-content h3 {
-   color: white;
-  font-weight: 600;
-  margin-bottom: 20px;
-  font-size: 28px;
-}
-
-.adventurer-content strong {
-  display: block;
-  font-weight: 600;
-  color: #858585;
-  margin-bottom: 0.75rem;
-}
-
-.adventurer-content p {
-  color: #858585;
-  line-height: 1.6;
-}
-
-.adventurer-image {
-  flex: 1 1 35%;
-  max-width: 300px;
-}
-
-.adventurer-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  object-fit: cover;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .adventurer-class {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .adventurer-image {
-    max-width: 100%;
-  }
-
-  .adventurer-content {
-    flex: 1 1 100%;
-  }
-}
-.director-section {
-  background-color: #0a182b;
-  padding: 60px 20px;
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  text-align: center;
-}
-
-.director-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #ffffff;
-}
-
-.director-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-}
-
-.director-card {
-  background-color: #1d3b64;
-  padding: 30px 20px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-  max-width: 300px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.director-card:hover {
-  transform: translateY(-10px);
-}
-
-.director-image {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-  border: 3px solid #315eff;
-  margin-left: 35px;
-}
-
-.director-name {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.director-title {
-  font-size: 0.95rem;
-  color: #aaa;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.director-desc {
-  font-size: 0.95rem;
-  color: #dcdcdc;
-  line-height: 1.6;
-}
 
 
 

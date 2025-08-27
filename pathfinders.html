@@ -1,339 +1,756 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pathfinders | HCSDA Church</title>
+    <link rel="icon" href="favicon.ico" />
+    <!-- Standard Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pathfinders - HCSDA Church</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="pathfinders.css">
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-</head>
+    <!-- Apple Touch Icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
 
-<body>
+    <!-- Android / Chrome -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/android-chrome-512x512.png"
+    />
 
-  <div id="navbar-container"></div>
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/site.webmanifest" />
 
-  <!-- Pathfinders Intro Video -->
-  <div class="pathfinders-video-container">
-    <video id="desktop-video" class="pathfinders-video" autoplay muted loop playsinline>
-      <source src="assets/path.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#0a182b" />
+    <meta name="msapplication-TileColor" content="#0a182b" />
 
-<section class="pathfinders-info" data-aos="fade-up">
-  <h2 data-aos="fade-right">Who Are Pathfinders?</h2>
-  <p>
-    When people hear "Pathfinders," they often think of marching, outdoor adventures, creative hobbies, and exploring nature. But beyond these, Pathfinders is a dynamic, character-building club created especially for children ages 10 to 15. Sponsored by the Seventh-day Adventist Church and open to youth of all backgrounds, Pathfinders inspires kids to discover more about the world and deepen their spiritual connection with God. With millions of members across the globe, Pathfinders is a thriving community of young adventurers.
-  </p>
+    <meta
+      name="description"
+      content="Learn about the Pathfinder and Adventurer Clubs at Harlow Central SDA Church. Discover programs for children and youth including camping, leadership, faith development, and outdoor skills."
+    />
+    <meta
+      name="keywords"
+      content="Harlow SDA Pathfinders, Adventurers Harlow, Pathfinder Club UK, Adventurer Club UK, Seventh-day Adventist youth programs, camping Harlow SDA, Pathfinder honors, Adventurer classes, Harlow Central SDA youth ministry"
+    />
+    <meta name="author" content="Harlow Central SDA Church" />
 
-  <h2 data-aos="fade-left">What Does Pathfindering Offer?</h2>
-  <ul data-aos="zoom-in">
-    <li>Outdoor experiences like camping, survival training, and bushcraft</li>
-    <li>Tailored leadership development through hands-on classes</li>
-    <li>Projects that give back—supporting local communities, preserving nature, and uplifting others through service</li>
-    <li>A wide variety of fun and educational modules—from arts and crafts to conservation and health—that earn you awards and honors</li>
-    <li>Encouragement and guidance from supportive mentors, with a close staff-to-youth ratio for meaningful relationships</li>
-  </ul>
+    <!-- Open Graph / Facebook -->
+    <meta
+      property="og:title"
+      content="Pathfinders & Adventurers - Harlow Central SDA Church"
+    />
+    <meta
+      property="og:description"
+      content="Explore Pathfinders and Adventurers at Harlow Central SDA Church: faith, fun, outdoor activities, leadership, and service for children and youth."
+    />
+    <meta
+      property="og:image"
+      content="https://www.harlowsdachurch.org/assets/pathfinders-preview.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.harlowsdachurch.org/pathfinders"
+    />
 
-  <h2 data-aos="fade-up">Developing Lifelong Skills</h2>
-  <p data-aos="fade-up">
-    The Pathfinder program nurtures young people in every area: physical, mental, emotional, social, and spiritual. It takes cues from organizations like the Scouts but remains distinctly rooted in Christian principles. Pathfinders are empowered to lead, solve problems, support their peers, and live responsibly. Whether it’s teamwork, discipline, or staying healthy, every activity helps shape well-rounded individuals prepared for life’s challenges.
-  </p>
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Pathfinders & Adventurers - Harlow Central SDA Church"
+    />
+    <meta
+      name="twitter:description"
+      content="Join the Pathfinder and Adventurer Clubs at Harlow Central SDA Church. Faith, leadership, outdoor skills, and service for young people."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.harlowsdachurch.org/assets/pathfinders-preview.jpg"
+    />
 
-  <div class="pathfinders-images" data-aos="zoom-in-up">
-    <img src="images/pathfinders1.jpg" alt="Pathfinders camping">
-    <img src="images/pathfinders2.jpg" alt="Pathfinders group activity">
-    <img src="images/pathfinders3.jpg" alt="Learning new skills in Pathfinders">
-  </div>
-</section>
-<section class="adventurer-classes" data-aos="fade-up">
-  <div class="club-logo">
-    <img src="assets/pathlog.png" alt="Pathfinder Club Logo">
-  </div>
-  <h2 class="ad">Pathfinder Club Classes</h2>
-  
-  <p class="adp">
-    The Pathfinder Club is designed for children aged 10 to 15, offering an exciting, values-based learning environment where young people grow spiritually, socially, and physically. These classes encourage adventure, responsibility, and leadership while strengthening faith and character.
-  </p>
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.harlowsdachurch.org/pathfinders" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="pathfinders.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  </head>
 
-  <hr>
+  <body>
+    <div id="navbar-container"></div>
 
-  <div class="adventurer-class" data-aos="fade-right">
-    <div class="adventurer-content">
-      <h3>🤝 Friend (Age 10 / Year 5)</h3>
-      <strong>Discovering Friendship and Faith</strong>
-      <p>This introductory level helps Pathfinders build a solid foundation in Christian living. Friends learn about health, citizenship, and service through fun and engaging activities that encourage teamwork and personal growth.</p>
+    <!-- Pathfinders Intro Video -->
+    <div class="pathfinders-video-container">
+      <video
+        id="desktop-video"
+        class="pathfinders-video"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="assets/path.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
-    <div class="adventurer-image">
-      <img src="assets/26.png" alt="Friend Class">
-    </div>
-  </div>
 
-  <hr>
-
-  <div class="adventurer-class" data-aos="fade-left">
-    <div class="adventurer-content">
-      <h3>🧍‍♂️ Companion (Age 11 / Year 6)</h3>
-      <strong>Walking Together with Purpose</strong>
-      <p>Companions continue their spiritual and personal development by exploring more about their faith, the natural world, and service. They begin to take on more responsibility within their group and community.</p>
-    </div>
-    <div class="adventurer-image">
-      <img src="assets/27.png" alt="Companion Class">
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="adventurer-class" data-aos="fade-right">
-    <div class="adventurer-content">
-      <h3>🧭 Explorer (Age 12 / Year 7)</h3>
-      <strong>Adventuring with Curiosity and Courage</strong>
-      <p>Explorers dive deeper into nature, history, and the Bible. They learn survival skills, camping techniques, and how to apply their faith in everyday decisions and actions.</p>
-    </div>
-    <div class="adventurer-image">
-      <img src="assets/28.png" alt="Explorer Class">
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="adventurer-class" data-aos="fade-left">
-    <div class="adventurer-content">
-      <h3>🏕️ Ranger (Age 13 / Year 8)</h3>
-      <strong>Guided by Faith, Ready for Challenge</strong>
-      <p>Rangers grow in self-reliance and leadership. This level emphasizes critical thinking, faith exploration, and outdoor mastery through service projects, camping, and real-life problem-solving.</p>
-    </div>
-    <div class="adventurer-image">
-      <img src="assets/29.png" alt="Ranger Class">
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="adventurer-class" data-aos="fade-right">
-    <div class="adventurer-content">
-      <h3>🚀 Voyager (Age 14 / Year 9)</h3>
-      <strong>Preparing to Lead and Serve</strong>
-      <p>Voyagers deepen their commitment to service and leadership. They explore global citizenship, plan mission-oriented activities, and reflect on their spiritual identity as they prepare for the final stage.</p>
-    </div>
-    <div class="adventurer-image">
-      <img src="assets/30.png" alt="Voyager Class">
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="adventurer-class" data-aos="fade-left" >
-    <div class="adventurer-content">
-      <h3>🧭 Guide (Age 15 / Year 10)</h3>
-      <strong>Leading with Integrity and Vision</strong>
-      <p>The Guide class represents the culmination of the Pathfinder journey. Youth take the lead in planning, mentoring, and serving others, ready to transition into Teen Leadership Training and lifelong discipleship.</p>
-    </div>
-    <div class="adventurer-image">
-      <img src="assets/31.png" alt="Guide Class" >
-    </div >
-  </div>
-</section>
-<section class="adventurer-classes" data-aos="fade-up" id="adventurers-info">
-  <div class="club-logo">
-    <img src="assets/Adventurer_Logo-2048x1826.webp" alt="Adventurer Club Logo">
-  </div>
-  <h2 class="ad" >Adventurer Club Classes</h2>
-  
-  <p class="adp">
-    The Seventh-day Adventist Adventurer Club offers a nurturing environment where children aged 4 to 9 can grow in faith, character, and confidence. Each class level is designed to meet the developmental and spiritual needs of children through fun, hands-on learning rooted in Christian values.
-  </p>
-
-  <hr>
-
-  <div class="adventurer-class" data-aos="fade-right">
-    <div class="adventurer-content">
-      <h3>🐑 Little Lamb (Age 4)</h3>
-      <strong>A Gentle Start to a Faith-Filled Journey</strong>
-      <p>The Little Lamb class introduces our youngest Adventurers to the joy of learning about Jesus through songs, stories, nature, and simple activities. It helps build a sense of belonging and encourages curiosity in a loving, faith-centred setting.</p>
-    </div>
-    <div class="adventurer-image">
-      <img src="assets/ll.webp" alt="Little Lamb Adventurer class">
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="adventurer-class" data-aos="fade-left">
-    <div class="adventurer-content">
-      <h3>🐥 Early Bird (Age 5)</h3>
-      <strong>Spreading Their Wings with Purpose</strong>
-      <p>Early Birds begin to explore more structured learning through creative play and guided discovery. They learn about God’s love, family, health, and nature in ways that spark wonder and build a strong moral foundation.</p>
-    </div>
-    <div class="adventurer-image">
-      <img src="assets/eb.webp" alt="Early Bird Adventurer class">
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="adventurer-class" data-aos="fade-right">
-    <div class="adventurer-content">
-      <h3>🐝 Busy Bee (Age 6 / Year 1)</h3>
-      <strong>Busy Learning, Growing and Helping</strong>
-      <p>Busy Bees are encouraged to develop responsibility, helpfulness, and kindness through engaging activities and themed badges. This stage helps children understand more about the world around them, while deepening their relationship with God.</p>
-    </div>
-    <div class="adventurer-image">
-      <img src="assets/bb.webp" alt="Busy Bee Adventurer class">
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="adventurer-class" data-aos="fade-left">
-    <div class="adventurer-content">
-      <h3>🌞 Sunbeam (Age 7 / Year 2)</h3>
-      <strong>Shining for Jesus Every Day</strong>
-      <p>At the Sunbeam level, children learn how to let their light shine by practising good choices, healthy habits, and acts of service. Through Bible stories, crafts, and nature activities, they begin to see the joy of living a Christ-centred life.</p>
-    </div>
-    <div class="adventurer-image">
-      <img src="assets/rs.webp" alt="Sunbeam Adventurer class">
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="adventurer-class" data-aos="fade-right">
-    <div class="adventurer-content">
-      <h3>🧱 Builder (Age 8 / Year 3)</h3>
-      <strong>Laying a Strong Foundation</strong>
-      <p>Builders focus on strengthening their values, learning practical skills, and deepening their faith. This class helps children “build” character, develop confidence, and understand the importance of living out their beliefs.</p>
-    </div>
-    <div class="adventurer-image">
-      <img src="assets/b.webp" alt="Builder Adventurer class">
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="adventurer-class" data-aos="fade-left" >
-    <div class="adventurer-content">
-      <h3>✋ Helping Hand (Age 9 / Year 4)</h3>
-      <strong>Equipped to Serve and Lead</strong>
-      <p>Helping Hands is the final step in the Adventurer programme. Children are encouraged to take initiative, lead with compassion, and grow in responsibility. It prepares them for the next exciting chapter: the Pathfinder Club.</p>
-    </div>
-    <div class="adventurer-image">
-      <img src="assets/hh.png" alt="Helping Hand Adventurer class">
-    </div>
-  </div >
-</section id="pathfinder-info">
-
-<section class="director-section" data-aos="fade-up" >
-  <h2>Meet Our Leaders</h2>
-  <div class="director-container">
-    
-    <div class="director-card" data-aos="fade-right">
-      <img src="assets/mfon.png" alt="Director" class="director-image">
-      <div class="director-name">Bro. Mfon Etokakpan</div>
-      <p class="director-desc">
-        Passionate about music and outdoor leadership, Mfon guides our Pathfinders with strength, vision, and faith.
+    <section
+      class="max-w-[1100px] mx-auto px-5 py-12 font-[Poppins] bg-[#0a182b] rounded-lg text-left"
+      data-aos="fade-up"
+    >
+      <h2
+        data-aos="fade-right"
+        class="text-white font-semibold mb-5 text-[28px]"
+      >
+        Who Are Pathfinders?
+      </h2>
+      <p class="text-[#858585] leading-relaxed mb-7 text-base">
+        When people hear "Pathfinders," they often think of marching, outdoor
+        adventures, creative hobbies, and exploring nature. But beyond these,
+        Pathfinders is a dynamic, character-building club created especially for
+        children ages 10 to 15. Sponsored by the Seventh-day Adventist Church
+        and open to youth of all backgrounds, Pathfinders inspires kids to
+        discover more about the world and deepen their spiritual connection with
+        God. With millions of members across the globe, Pathfinders is a
+        thriving community of young adventurers.
       </p>
-    </div>
 
-    <div class="director-card" data-aos="fade-left">
-      <img src="assets/sabitha.png" alt="Deputy Director" class="director-image">
-      <div class="director-name">Sis. Sabitha Pamu</div>
-      <p class="director-desc">
-        With energy and compassion, Sabitha supports our programs and helps each Pathfinder grow in confidence and character.
+      <h2
+        data-aos="fade-left"
+        class="text-white font-semibold mb-5 text-[28px]"
+      >
+        What Does Pathfindering Offer?
+      </h2>
+      <ul data-aos="zoom-in" class="pl-5 mb-7 list-disc">
+        <li class="mb-2.5 text-base text-[#858585] leading-[1.6] -ml-4">
+          Outdoor experiences like camping, survival training, and bushcraft
+        </li>
+        <li class="mb-2.5 text-base text-[#858585] leading-[1.6] -ml-4">
+          Tailored leadership development through hands-on classes
+        </li>
+        <li class="mb-2.5 text-base text-[#858585] leading-[1.6] -ml-4">
+          Projects that give back—supporting local communities, preserving
+          nature, and uplifting others through service
+        </li>
+        <li class="mb-2.5 text-base text-[#858585] leading-[1.6] -ml-4">
+          A wide variety of fun and educational modules—from arts and crafts to
+          conservation and health—that earn you awards and honors
+        </li>
+        <li class="mb-2.5 text-base text-[#858585] leading-[1.6] -ml-4">
+          Encouragement and guidance from supportive mentors, with a close
+          staff-to-youth ratio for meaningful relationships
+        </li>
+      </ul>
+
+      <h2 data-aos="fade-up" class="text-white font-semibold mb-5 text-[28px]">
+        Developing Lifelong Skills
+      </h2>
+      <p
+        data-aos="fade-up"
+        class="text-[#858585] leading-relaxed mb-7 text-base"
+      >
+        The Pathfinder program nurtures young people in every area: physical,
+        mental, emotional, social, and spiritual. It takes cues from
+        organizations like the Scouts but remains distinctly rooted in Christian
+        principles. Pathfinders are empowered to lead, solve problems, support
+        their peers, and live responsibly. Whether it’s teamwork, discipline, or
+        staying healthy, every activity helps shape well-rounded individuals
+        prepared for life’s challenges.
       </p>
-    </div>
-<div class="director-card" data-aos="fade-left">
-      <img src="assets/afeesha.png" alt="Deputy Director" class="director-image">
-      <div class="director-name">Sis. Afeesha</div>
-      <p class="director-desc">
-        Afeesha brings creativity and warmth to our leadership team, encouraging each Pathfinder to discover their strengths and walk in faith.
+
+      <div
+        class="flex flex-wrap gap-5 mt-7 justify-center"
+        data-aos="zoom-in-up"
+      >
+        <img
+          src="images/pathfinders1.jpg"
+          alt="Pathfinders camping"
+          class="w-full max-w-[300px] rounded-lg shadow-md object-cover"
+        />
+        <img
+          src="images/pathfinders2.jpg"
+          alt="Pathfinders group activity"
+          class="w-full max-w-[300px] rounded-lg shadow-md object-cover"
+        />
+        <img
+          src="images/pathfinders3.jpg"
+          alt="Learning new skills in Pathfinders"
+          class="w-full max-w-[300px] rounded-lg shadow-md object-cover"
+        />
+      </div>
+    </section>
+    <section
+      class="px-8 md:px-32 py-16 bg-[#0a182b] font-[Poppins]"
+      data-aos="fade-up"
+    >
+      <div class="text-center my-5">
+        <img
+          src="assets/pathlog.png"
+          alt="Pathfinder Club Logo"
+          class="max-w-[120px] h-auto inline-block"
+        />
+      </div>
+      <h2 class="text-white font-semibold mb-5 text-[28px]">
+        Pathfinder Club Classes
+      </h2>
+
+      <p class="text-[#858585]">
+        The Pathfinder Club is designed for children aged 10 to 15, offering an
+        exciting, values-based learning environment where young people grow
+        spiritually, socially, and physically. These classes encourage
+        adventure, responsibility, and leadership while strengthening faith and
+        character.
       </p>
-    </div>
-  </div>
-</section>
+      <br />
+      <hr />
 
+      <div
+        class="flex flex-wrap items-center justify-between mb-12 gap-8"
+        data-aos="fade-right"
+      >
+        <div class="flex-1 basis-[60%] text-left">
+          <h3 class="text-white font-semibold mb-5 text-[28px]">
+            🤝 Friend (Age 10 / Year 5)
+          </h3>
+          <strong class="block font-semibold text-[#858585] mb-3"
+            >Discovering Friendship and Faith</strong
+          >
+          <p class="text-[#858585] leading-relaxed">
+            This introductory level helps Pathfinders build a solid foundation
+            in Christian living. Friends learn about health, citizenship, and
+            service through fun and engaging activities that encourage teamwork
+            and personal growth.
+          </p>
+        </div>
+        <div class="flex-1 basis-[35%] max-w-[300px]">
+          <img
+            src="assets/26.png"
+            alt="Friend Class"
+            class="w-full h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+      </div>
 
+      <hr />
 
+      <div
+        class="flex flex-wrap items-center justify-between mb-12 gap-8"
+        data-aos="fade-left"
+      >
+        <div class="flex-1 basis-[60%] text-left">
+          <h3 class="text-white font-semibold mb-5 text-[28px]">
+            🧍‍♂️ Companion (Age 11 / Year 6)
+          </h3>
+          <strong class="block font-semibold text-[#858585] mb-3"
+            >Walking Together with Purpose</strong
+          >
+          <p class="text-[#858585] leading-relaxed">
+            Companions continue their spiritual and personal development by
+            exploring more about their faith, the natural world, and service.
+            They begin to take on more responsibility within their group and
+            community.
+          </p>
+        </div>
+        <div class="flex-1 basis-[35%] max-w-[300px]">
+          <img
+            src="assets/27.png"
+            alt="Companion Class"
+            class="w-full h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+      </div>
 
+      <hr />
 
-<div id="footer"></div>
+      <div
+        class="flex flex-wrap items-center justify-between mb-12 gap-8"
+        data-aos="fade-right"
+      >
+        <div class="flex-1 basis-[60%] text-left">
+          <h3 class="text-white font-semibold mb-5 text-[28px]">
+            🧭 Explorer (Age 12 / Year 7)
+          </h3>
+          <strong class="block font-semibold text-[#858585] mb-3"
+            >Adventuring with Curiosity and Courage</strong
+          >
+          <p class="text-[#858585] leading-relaxed">
+            Explorers dive deeper into nature, history, and the Bible. They
+            learn survival skills, camping techniques, and how to apply their
+            faith in everyday decisions and actions.
+          </p>
+        </div>
+        <div class="flex-1 basis-[35%] max-w-[300px]">
+          <img
+            src="assets/28.png"
+            alt="Explorer Class"
+            class="w-full h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+      </div>
 
-  <script>
-        // Load the navbar HTML
-        fetch("navbar.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("navbar-container").innerHTML = data;
+      <hr />
 
-            //navbar dropdown
-            const toggle = document.querySelector(".dropdown-wrapper");
-            const menu = document.getElementById("departments-menu");
-            let hideTimeout;
+      <div
+        class="flex flex-wrap items-center justify-between mb-12 gap-8"
+        data-aos="fade-left"
+      >
+        <div class="flex-1 basis-[60%] text-left">
+          <h3 class="text-white font-semibold mb-5 text-[28px]">
+            🏕️ Ranger (Age 13 / Year 8)
+          </h3>
+          <strong class="block font-semibold text-[#858585] mb-3"
+            >Guided by Faith, Ready for Challenge</strong
+          >
+          <p class="text-[#858585] leading-relaxed">
+            Rangers grow in self-reliance and leadership. This level emphasizes
+            critical thinking, faith exploration, and outdoor mastery through
+            service projects, camping, and real-life problem-solving.
+          </p>
+        </div>
+        <div class="flex-1 basis-[35%] max-w-[300px]">
+          <img
+            src="assets/29.png"
+            alt="Ranger Class"
+            class="w-full h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+      </div>
 
-            if (toggle && menu) {
-              function showMenu() {
-                clearTimeout(hideTimeout);
-                menu.classList.add("show");
-              }
+      <hr />
 
-              function scheduleHideMenu() {
-                hideTimeout = setTimeout(() => {
-                  menu.classList.remove("show");
-                }, 200);
-              }
+      <div
+        class="flex flex-wrap items-center justify-between mb-12 gap-8"
+        data-aos="fade-right"
+      >
+        <div class="flex-1 basis-[60%] text-left">
+          <h3 class="text-white font-semibold mb-5 text-[28px]">
+            🚀 Voyager (Age 14 / Year 9)
+          </h3>
+          <strong class="block font-semibold text-[#858585] mb-3"
+            >Preparing to Lead and Serve</strong
+          >
+          <p class="text-[#858585] leading-relaxed">
+            Voyagers deepen their commitment to service and leadership. They
+            explore global citizenship, plan mission-oriented activities, and
+            reflect on their spiritual identity as they prepare for the final
+            stage.
+          </p>
+        </div>
+        <div class="flex-1 basis-[35%] max-w-[300px]">
+          <img
+            src="assets/30.png"
+            alt="Voyager Class"
+            class="w-full h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+      </div>
 
-              toggle.addEventListener("mouseenter", showMenu);
-              menu.addEventListener("mouseenter", showMenu);
+      <hr />
 
-              toggle.addEventListener("mouseleave", scheduleHideMenu);
-              menu.addEventListener("mouseleave", scheduleHideMenu);
+      <div
+        class="flex flex-wrap items-center justify-between mb-12 gap-8"
+        data-aos="fade-left"
+      >
+        <div class="flex-1 basis-[60%] text-left">
+          <h3 class="text-white font-semibold mb-5 text-[28px]">
+            🧭 Guide (Age 15 / Year 10)
+          </h3>
+          <strong class="block font-semibold text-[#858585] mb-3"
+            >Leading with Integrity and Vision</strong
+          >
+          <p class="text-[#858585] leading-relaxed">
+            The Guide class represents the culmination of the Pathfinder
+            journey. Youth take the lead in planning, mentoring, and serving
+            others, ready to transition into Teen Leadership Training and
+            lifelong discipleship.
+          </p>
+        </div>
+        <div class="flex-1 basis-[35%] max-w-[300px]">
+          <img
+            src="assets/31.png"
+            alt="Guide Class"
+            class="w-full h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+      </div>
+    </section>
+    <section
+      class="px-8 md:px-32 py-16 bg-[#0a182b] font-[Poppins]"
+      data-aos="fade-up"
+      id="adventurers-info"
+    >
+      <div class="text-center my-5">
+        <img
+          src="assets/Adventurer_Logo-2048x1826.webp"
+          alt="Adventurer Club Logo"
+          class="max-w-[120px] h-auto inline-block"
+        />
+      </div>
+      <h2 class="text-white font-semibold mb-5 text-[28px]">
+        Adventurer Club Classes
+      </h2>
+
+      <p class="text-[#858585]">
+        The Seventh-day Adventist Adventurer Club offers a nurturing environment
+        where children aged 4 to 9 can grow in faith, character, and confidence.
+        Each class level is designed to meet the developmental and spiritual
+        needs of children through fun, hands-on learning rooted in Christian
+        values.
+      </p>
+      <br />
+      <hr />
+
+      <div
+        class="flex flex-wrap items-center justify-between mb-12 gap-8"
+        data-aos="fade-right"
+      >
+        <div class="flex-1 basis-[60%] text-left">
+          <h3 class="text-white font-semibold mb-5 text-[28px]">
+            🐑 Little Lamb (Age 4)
+          </h3>
+          <strong class="block font-semibold text-[#858585] mb-3"
+            >A Gentle Start to a Faith-Filled Journey</strong
+          >
+          <p class="text-[#858585] leading-relaxed">
+            The Little Lamb class introduces our youngest Adventurers to the joy
+            of learning about Jesus through songs, stories, nature, and simple
+            activities. It helps build a sense of belonging and encourages
+            curiosity in a loving, faith-centred setting.
+          </p>
+        </div>
+        <div class="flex-1 basis-[35%] max-w-[300px]">
+          <img
+            src="assets/ll.webp"
+            alt="Little Lamb Adventurer class"
+            class="w-full h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+      </div>
+
+      <hr />
+
+      <div
+        class="flex flex-wrap items-center justify-between mb-12 gap-8"
+        data-aos="fade-left"
+      >
+        <div class="flex-1 basis-[60%] text-left">
+          <h3 class="text-white font-semibold mb-5 text-[28px]">
+            🐥 Early Bird (Age 5)
+          </h3>
+          <strong class="block font-semibold text-[#858585] mb-3"
+            >Spreading Their Wings with Purpose</strong
+          >
+          <p class="text-[#858585] leading-relaxed">
+            Early Birds begin to explore more structured learning through
+            creative play and guided discovery. They learn about God’s love,
+            family, health, and nature in ways that spark wonder and build a
+            strong moral foundation.
+          </p>
+        </div>
+        <div class="flex-1 basis-[35%] max-w-[300px]">
+          <img
+            src="assets/eb.webp"
+            alt="Early Bird Adventurer class"
+            class="w-full h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+      </div>
+
+      <hr />
+
+      <div
+        class="flex flex-wrap items-center justify-between mb-12 gap-8"
+        data-aos="fade-right"
+      >
+        <div class="flex-1 basis-[60%] text-left">
+          <h3 class="text-white font-semibold mb-5 text-[28px]">
+            🐝 Busy Bee (Age 6 / Year 1)
+          </h3>
+          <strong class="block font-semibold text-[#858585] mb-3"
+            >Busy Learning, Growing and Helping</strong
+          >
+          <p class="text-[#858585] leading-relaxed">
+            Busy Bees are encouraged to develop responsibility, helpfulness, and
+            kindness through engaging activities and themed badges. This stage
+            helps children understand more about the world around them, while
+            deepening their relationship with God.
+          </p>
+        </div>
+        <div class="flex-1 basis-[35%] max-w-[300px]">
+          <img
+            src="assets/bb.webp"
+            alt="Busy Bee Adventurer class"
+            class="w-full h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+      </div>
+
+      <hr />
+
+      <div
+        class="flex flex-wrap items-center justify-between mb-12 gap-8"
+        data-aos="fade-left"
+      >
+        <div class="flex-1 basis-[60%] text-left">
+          <h3 class="text-white font-semibold mb-5 text-[28px]">
+            🌞 Sunbeam (Age 7 / Year 2)
+          </h3>
+          <strong class="block font-semibold text-[#858585] mb-3"
+            >Shining for Jesus Every Day</strong
+          >
+          <p class="text-[#858585] leading-relaxed">
+            At the Sunbeam level, children learn how to let their light shine by
+            practising good choices, healthy habits, and acts of service.
+            Through Bible stories, crafts, and nature activities, they begin to
+            see the joy of living a Christ-centred life.
+          </p>
+        </div>
+        <div class="flex-1 basis-[35%] max-w-[300px]">
+          <img
+            src="assets/rs.webp"
+            alt="Sunbeam Adventurer class"
+            class="w-full h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+      </div>
+
+      <hr />
+
+      <div
+        class="flex flex-wrap items-center justify-between mb-12 gap-8"
+        data-aos="fade-right"
+      >
+        <div class="flex-1 basis-[60%] text-left">
+          <h3 class="text-white font-semibold mb-5 text-[28px]">
+            🧱 Builder (Age 8 / Year 3)
+          </h3>
+          <strong class="block font-semibold text-[#858585] mb-3"
+            >Laying a Strong Foundation</strong
+          >
+          <p class="text-[#858585] leading-relaxed">
+            Builders focus on strengthening their values, learning practical
+            skills, and deepening their faith. This class helps children “build”
+            character, develop confidence, and understand the importance of
+            living out their beliefs.
+          </p>
+        </div>
+        <div class="flex-1 basis-[35%] max-w-[300px]">
+          <img
+            src="assets/b.webp"
+            alt="Builder Adventurer class"
+            class="w-full h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+      </div>
+
+      <hr />
+
+      <div
+        class="flex flex-wrap items-center justify-between mb-12 gap-8"
+        data-aos="fade-left"
+      >
+        <div class="flex-1 basis-[60%] text-left">
+          <h3 class="text-white font-semibold mb-5 text-[28px]">
+            ✋ Helping Hand (Age 9 / Year 4)
+          </h3>
+          <strong class="block font-semibold text-[#858585] mb-3"
+            >Equipped to Serve and Lead</strong
+          >
+          <p class="text-[#858585] leading-relaxed">
+            Helping Hands is the final step in the Adventurer programme.
+            Children are encouraged to take initiative, lead with compassion,
+            and grow in responsibility. It prepares them for the next exciting
+            chapter: the Pathfinder Club.
+          </p>
+        </div>
+        <div class="flex-1 basis-[35%] max-w-[300px]">
+          <img
+            src="assets/hh.png"
+            alt="Helping Hand Adventurer class"
+            class="w-full h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-[#0a182b] px-5 py-16 text-white text-center"
+      data-aos="fade-up"
+    >
+      <h2 class="text-4xl mb-10 text-white">Meet Our Leaders</h2>
+      <div class="flex flex-wrap justify-center gap-10">
+        <div
+          class="bg-[#1d3b64] px-5 py-8 rounded-xl shadow-xl max-w-[300px] text-center transition-transform duration-300 hover:-translate-y-2"
+          data-aos="fade-right"
+        >
+          <img
+            src="assets/mfon.png"
+            alt="Bro. Mfon Etokakpan"
+            class="w-[180px] h-[180px] rounded-full object-cover mb-5 border-[3px] border-[#315eff] mx-auto"
+          />
+          <h3 class="text-lg font-semibold mb-2">Bro. Mfon Etokakpan</h3>
+          <p class="text-sm text-[#dcdcdc] leading-relaxed">
+            Passionate about music and outdoor leadership, Mfon guides our
+            Pathfinders with strength, vision, and faith.
+          </p>
+        </div>
+        <div
+          class="bg-[#1d3b64] px-5 py-8 rounded-xl shadow-xl max-w-[300px] text-center transition-transform duration-300 hover:-translate-y-2"
+          data-aos="fade-left"
+        >
+          <img
+            src="assets/sabitha.png"
+            alt="Sis. Sabitha Pamu"
+            class="w-[180px] h-[180px] rounded-full object-cover mb-5 border-[3px] border-[#315eff] mx-auto"
+          />
+          <h3 class="text-lg font-semibold mb-2">Sis. Sabitha Pamu</h3>
+          <p class="text-sm text-[#dcdcdc] leading-relaxed">
+            With energy and compassion, Sabitha supports our programs and helps
+            each Pathfinder grow in confidence and character.
+          </p>
+        </div>
+        <div
+          class="bg-[#1d3b64] px-5 py-8 rounded-xl shadow-xl max-w-[300px] text-center transition-transform duration-300 hover:-translate-y-2"
+          data-aos="fade-left"
+        >
+          <img
+            src="assets/afeesha.png"
+            alt="Sis. Afeesha"
+            class="w-[180px] h-[180px] rounded-full object-cover mb-5 border-[3px] border-[#315eff] mx-auto"
+          />
+          <h3 class="text-lg font-semibold mb-2">Sis. Afeesha</h3>
+          <p class="text-sm text-[#dcdcdc] leading-relaxed">
+            Afeesha brings creativity and warmth to our leadership team,
+            encouraging each Pathfinder to discover their strengths and walk in
+            faith.
+          </p>
+        </div>
+        <div
+          class="bg-[#1d3b64] px-5 py-8 rounded-xl shadow-xl max-w-[300px] text-center transition-transform duration-300 hover:-translate-y-2"
+          data-aos="fade-left"
+        >
+          <img
+            src="assets/SisJuddianOboh.png"
+            alt="Sis. Juddian Oboh"
+            class="w-[180px] h-[180px] rounded-full object-cover mb-5 border-[3px] border-[#315eff] mx-auto"
+          />
+          <h3 class="text-lg font-semibold mb-2">Sis. Juddian Oboh</h3>
+          <p class="text-sm text-[#dcdcdc] leading-relaxed">
+            Juddian brings warmth and encouragement to our Pathfinder family,
+            helping young people grow in character, leadership, and a deeper
+            relationship with Christ.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+      // Load the navbar HTML
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
+
+          //navbar dropdown
+          const toggle = document.querySelector(".dropdown-wrapper");
+          const menu = document.getElementById("departments-menu");
+          let hideTimeout;
+
+          if (toggle && menu) {
+            function showMenu() {
+              clearTimeout(hideTimeout);
+              menu.classList.add("show");
             }
 
-            // scroll behavior and mobile menu
-            setTimeout(() => {
-              const navbar = document.getElementById("navbar");
-              const navLinks = document.querySelectorAll(".nav-ser");
+            function scheduleHideMenu() {
+              hideTimeout = setTimeout(() => {
+                menu.classList.remove("show");
+              }, 200);
+            }
 
-              function handleScroll() {
-                if (window.scrollY >= 100) {
-                  navbar.classList.add("scrolled");
-                  navLinks.forEach((link) =>
-                    link.classList.add("scrolled-link")
-                  );
-                } else {
-                  navbar.classList.remove("scrolled");
-                  navLinks.forEach((link) =>
-                    link.classList.remove("scrolled-link")
-                  );
-                }
+            toggle.addEventListener("mouseenter", showMenu);
+            menu.addEventListener("mouseenter", showMenu);
+
+            toggle.addEventListener("mouseleave", scheduleHideMenu);
+            menu.addEventListener("mouseleave", scheduleHideMenu);
+          }
+
+          // scroll behavior and mobile menu
+          setTimeout(() => {
+            const navbar = document.getElementById("navbar");
+            const navLinks = document.querySelectorAll(".nav-ser");
+
+            function handleScroll() {
+              if (window.scrollY >= 100) {
+                navbar.classList.add("scrolled");
+                navLinks.forEach((link) => link.classList.add("scrolled-link"));
+              } else {
+                navbar.classList.remove("scrolled");
+                navLinks.forEach((link) =>
+                  link.classList.remove("scrolled-link")
+                );
               }
+            }
 
-              handleScroll(); // ensure initial check
-              window.addEventListener("scroll", handleScroll);
+            handleScroll(); // ensure initial check
+            window.addEventListener("scroll", handleScroll);
 
-              window.toggleMenu = function () {
-                const menu = document.getElementById("mobile-menu");
-                menu.classList.toggle("hidden");
-              };
-            }, 50);
-          });
-        // Load the footer HTML
-        fetch("footer.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("footer").innerHTML = data;
-          });
-        AOS.init({
-          duration: 1000,
+            window.toggleMenu = function () {
+              const menu = document.getElementById("mobile-menu");
+              menu.classList.toggle("hidden");
+            };
+          }, 50);
         });
-      </script>
-
-
-</body>
+      // Load the footer HTML
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+      AOS.init({
+        duration: 1000,
+      });
+    </script>
+  </body>
 </html>
