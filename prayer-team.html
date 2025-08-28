@@ -48,22 +48,49 @@
     <meta name="theme-color" content="#0a182b" />
     <meta name="msapplication-TileColor" content="#0a182b" />
 
-    <meta name="description" content="Join the Prayer Team at Harlow Central SDA Church. Submit prayer requests, connect on our prayer line via Zoom, and experience the power of united prayer and intercession." />
-    <meta name="keywords" content="Harlow SDA Church prayer, Harlow Adventist prayer team, prayer request Harlow, SDA prayer ministry UK, united prayer Harlow, Zoom prayer meeting SDA, intercessory prayer Adventist, Christian prayer support" />
+    <meta
+      name="description"
+      content="Join the Prayer Team at Harlow Central SDA Church. Submit prayer requests, connect on our prayer line via Zoom, and experience the power of united prayer and intercession."
+    />
+    <meta
+      name="keywords"
+      content="Harlow SDA Church prayer, Harlow Adventist prayer team, prayer request Harlow, SDA prayer ministry UK, united prayer Harlow, Zoom prayer meeting SDA, intercessory prayer Adventist, Christian prayer support"
+    />
     <meta name="author" content="Harlow Central SDA Church" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Prayer Team - Harlow Central SDA Church" />
-    <meta property="og:description" content="Submit prayer requests and join the Prayer Team at Harlow Central SDA Church. Experience the power of faith, intercession, and community prayer." />
-    <meta property="og:image" content="https://www.harlowsdachurch.org/assets/prayer-team-preview.jpg" />
+    <meta
+      property="og:title"
+      content="Prayer Team - Harlow Central SDA Church"
+    />
+    <meta
+      property="og:description"
+      content="Submit prayer requests and join the Prayer Team at Harlow Central SDA Church. Experience the power of faith, intercession, and community prayer."
+    />
+    <meta
+      property="og:image"
+      content="https://www.harlowsdachurch.org/assets/prayer-team-preview.jpg"
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.harlowsdachurch.org/prayer-team" />
+    <meta
+      property="og:url"
+      content="https://www.harlowsdachurch.org/prayer-team"
+    />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Prayer Team - Harlow Central SDA Church" />
-    <meta name="twitter:description" content="Connect with the Prayer Team at Harlow SDA Church. Share prayer requests, join prayer calls, and grow in faith." />
-    <meta name="twitter:image" content="https://www.harlowsdachurch.org/assets/prayer-team-preview.jpg" />
+    <meta
+      name="twitter:title"
+      content="Prayer Team - Harlow Central SDA Church"
+    />
+    <meta
+      name="twitter:description"
+      content="Connect with the Prayer Team at Harlow SDA Church. Share prayer requests, join prayer calls, and grow in faith."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.harlowsdachurch.org/assets/prayer-team-preview.jpg"
+    />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://www.harlowsdachurch.org/prayer-team" />
@@ -192,31 +219,39 @@
           prayer team will uplift your request.
         </p>
         <form
+          id="prayer-form"
           action="https://api.web3forms.com/submit"
           method="POST"
           class="flex flex-col gap-[15px]"
         >
-          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+          <input
+            type="hidden"
+            name="access_key"
+            value="de4e27b8-8cdd-4629-9d9e-4f74411f3e2a"
+          />
+          <input type="hidden" name="form_name" value="Prayer Team Form" />
           <input
             type="text"
             name="name"
             placeholder="Your Name"
             required
-            class="px-4 py-3 border border-[#ddd] rounded-[8px] text-base focus:border-[#3b5998] focus:outline-none transition-colors duration-300"
+            style="text-transform: capitalize"
+            class="px-4 py-3 border font-[Poppins] border-[#ddd] rounded-[8px] text-base focus:border-[#3b5998] focus:outline-none transition-colors duration-300"
           />
           <input
             type="email"
             name="email"
             placeholder="Your Email"
             required
-            class="px-4 py-3 border border-[#ddd] rounded-[8px] text-base focus:border-[#3b5998] focus:outline-none transition-colors duration-300"
+            class="px-4 py-3 font-[Poppins] border border-[#ddd] rounded-[8px] text-base focus:border-[#3b5998] focus:outline-none transition-colors duration-300"
           />
           <textarea
             name="message"
             placeholder="Your Prayer Request"
             rows="5"
             required
-            class="px-4 py-3 border border-[#ddd] rounded-[8px] text-base focus:border-[#3b5998] focus:outline-none transition-colors duration-300"
+            style="text-transform: capitalize"
+            class="px-4 py-3 font-[Poppins] border border-[#ddd] rounded-[8px] text-base focus:border-[#3b5998] focus:outline-none transition-colors duration-300"
           ></textarea>
           <button
             type="submit"
@@ -326,6 +361,25 @@
       AOS.init({
         duration: 1000,
       });
+
+      const prayerForm = document.getElementById("prayer-form");
+      if (prayerForm) {
+        prayerForm.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const formData = new FormData(prayerForm);
+          const response = await fetch(prayerForm.action, {
+            method: prayerForm.method,
+            body: formData,
+            headers: { Accept: "application/json" },
+          });
+          if (response.ok) {
+            prayerForm.reset();
+            alert("Thank you! Your prayer request has been submitted.");
+          } else {
+            alert("Oops! Something went wrong, please try again.");
+          }
+        });
+      }
     </script>
   </body>
 </html>
