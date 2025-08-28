@@ -216,7 +216,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     .nav-links {
       display: flex;
       gap: 2rem;
-      margin-left: 200px;
+      margin-left: 140px;
       margin-top: 30px;
       margin-right: 40px;
       overflow-x: hidden !important;
@@ -232,8 +232,47 @@ color: #0a182b;
     .nav-link:hover {
       color: #2d73d4;
     }
-.navbar.scrolled .nav-link{
+    .navbar.scrolled .nav-link{
   color: #0a182b;
+}
+
+/* Responsive navbar adjustments */
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 1.5rem;
+    margin-left: 100px;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .nav-links {
+    gap: 1rem;
+    margin-left: 60px;
+    margin-right: 10px;
+  }
+  .logo-image {
+    width: 55%;
+  }
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* hide desktop nav links */
+  }
+  .mobile-only {
+    display: block !important;
+  }
+  .navbar-wrapper {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 576px) {
+  .logo-image {
+    width: 50%;
+    margin-top: 20px;
+  }
+  .menu-button {
+    margin-top: 15px;
+  }
 }
     
     
